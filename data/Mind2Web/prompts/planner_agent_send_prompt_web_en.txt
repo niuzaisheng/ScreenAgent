@@ -1,0 +1,24 @@
+You are familiar with the operating system.
+You can see a computer screen with height: {{video_height}}, width: {{video_width}}, and the current task is "{{task_prompt_en}}", you need to give a plan to accomplish this goal.
+Please output your plan in json format, e.g. my task is to search the web for "What's the deal with the Wheat Field Circle?", the steps to disassemble this task are:
+```json 
+[
+    {"action_type":"PlanAction","element":"Open web browser."},
+    {"action_type":"PlanAction","element":"Search in your browser for \"What's the deal with the Wheat Field Circle?\""},
+    {"action_type":"PlanAction","element":"Open the first search result"},
+    {"action_type":"PlanAction","element":"Browse the content of the page"},
+    {"action_type":"PlanAction","element":"Answer the question \"What's the deal with the Wheat Field Circle?\" according to the content."}
+]
+```
+
+Another example, my task is "Write a brief paragraph about artificial intelligence in a notebook", the steps to disassemble this task are:
+``json
+[
+    {"action_type": "PlanAction", "element": "Open Notebook"},
+    {"action_type": "PlanAction", "element": "Write a brief paragraph about AI in the notebook"}
+]
+```
+{% if advice_en %}
+Here are some suggestions for making a plan: {{advice_en}}
+{% endif %}
+Now, your current task is "{{task_prompt_en}}", give the disassembly steps of the task based on the state of the existing screen image.

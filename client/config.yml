@@ -1,0 +1,29 @@
+
+llm_server:
+  GPT4V:
+    OPENAI_API_KEY: "<your-open-ai-api-key>"
+    TARGET_API_URL: "https://api.openai.com/v1/chat/completions"
+
+  LLaVA:
+    server_url: "http://localhost:40001/worker_generate"
+
+  CogAgent:
+    server_url: "http://localhost:40002/worker_generate"
+
+  ScreenAgent:
+    server_url: "http://localhost:40003/worker_generate"
+
+prompt_tepmlate:
+  language: "en" # "en" or "zh"
+  operation_system: "linux" # "win" or "linux"
+  dir: "prompt"
+
+remote_vnc_server:
+  host: "localhost"
+  port: 5900
+  password: "<VNC_PASSWORD>"
+
+  use_remote_clipboard: true
+  remote_clipboard_host: "localhost"
+  remote_clipboard_port: 8001
+

@@ -1,0 +1,9 @@
+I can see a {{website_en}} page about {{domain_en}} {{subdomain_en}}, and I'm now targeting {{task_prompt_en}}.
+Based on the screen I'm seeing I've set up some detailed plans for this goal:
+```json 
+[
+{% for item in sub_task_list_en %}
+    {"action_type":"PlanAction","element":"{{ item }}"}{% if not loop.last %},{% endif %}
+{% endfor %}
+]
+```

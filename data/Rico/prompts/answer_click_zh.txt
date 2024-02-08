@@ -1,0 +1,6 @@
+为了完成 {{task_prompt}}，我将执行以下操作：
+```json 
+[
+    {"action_type":"MouseAction","mouse_action_type":"click","mouse_button":"left","mouse_position":{"width":{{center_width}},"height":{{center_height}}}}
+]
+```

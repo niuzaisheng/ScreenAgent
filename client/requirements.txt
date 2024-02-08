@@ -1,0 +1,12 @@
+PyQt5
+numpy
+pillow
+keysymdef==1.2.0
+lxml
+Jinja2
+urllib3
+cryptography
+transitions
+pyparsing
+qasync
+requests

@@ -1,0 +1,6 @@
+My plan is to click {{task_prompt}}, so my action will be:
+```json 
+[
+    {"action_type":"MouseAction","mouse_action_type":"click","mouse_button":"left","mouse_position":{"width":{{center_width}},"height":{{center_height}}}}
+]
+```

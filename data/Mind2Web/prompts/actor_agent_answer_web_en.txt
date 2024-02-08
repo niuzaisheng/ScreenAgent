@@ -1,0 +1,16 @@
+To finish "{{task_prompt_en}}", I need to finish the current_task"{{current_task_en}}" by this action:
+{% if operation_type == 'CLICK' or operation_type == 'SELECT' %}
+```json 
+[
+    {"action_type":"MouseAction","mouse_action_type":"click","mouse_button":"left","mouse_position":{"width":{{center_width}},"height":{{center_height}}}}
+]
+```
+{% elif operation_type == 'TYPE' %}
+```json 
+[
+    {"action_type":"MouseAction","mouse_action_type":"click","mouse_button":"left","mouse_position":{"width":{{center_width}},"height":{{center_height}}}},
+    {"action_type":"KeyboardAction","keyboard_action_type":"text","keyboard_text":"{{operation_value}}"}{% if is_last_action_in_subsession %},
+    {"action_type":"KeyboardAction","keyboard_action_type":"press","keyboard_key":"Enter"}{% endif %}
+]
+```
+{% endif %}

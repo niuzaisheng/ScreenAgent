@@ -1,0 +1,12 @@
+{% if situation == 'sub_task_success' %}
+I think the current subtask is done well, please continue to the next subtask.
+```json  {"action_type":"EvaluateSubTaskAction", "situation": "sub_task_success"} ```
+The mission will go on.
+{% elif situation == 'need_retry' %}
+```json  {"action_type":"EvaluateSubTaskAction", "situation": "need_retry", "advice": "{{advice_en}}"} ```
+Please try again.
+{% elif situation == 'need_reformulate' %}
+I don't think the current plan is suitable for the current situation because the current page has changed so much that the plan already in place cannot be continued and needs to be re-planned.
+```json {"action_type":"EvaluateSubTaskAction", "situation": "need_reformulate", "advice": "{{advice_en}}"} ```
+Please reformulate the plan.
+{% endif %}

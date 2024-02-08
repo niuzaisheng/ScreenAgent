@@ -1,0 +1,7 @@
+我的计划是拖动画一个{{task_prompt}}的框，所以我的动作是：
+```json 
+[
+    {"action_type":"MouseAction","mouse_action_type":"move","mouse_position":{"width":{{drag_start_width}},"height":{{drag_start_height}}}},
+    {"action_type":"MouseAction","mouse_action_type":"drag","mouse_button":"left","mouse_position":{"width":{{drag_end_width}},"height":{{drag_end_height}}}}
+]
+```

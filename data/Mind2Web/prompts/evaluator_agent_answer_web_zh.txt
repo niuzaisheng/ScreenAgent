@@ -1,0 +1,9 @@
+{% if situation == 'sub_task_success' %}
+我认为当前的子任务已经完成，请继续下一个子任务。
+```json  {"action_type":"EvaluateSubTaskAction", "situation": "sub_task_success"} ```
+{% elif situation == 'need_retry' %}
+```json  {"action_type":"EvaluateSubTaskAction", "situation": "need_retry", "advice": "{{advice_zh}}"} ```
+请再试一次。
+{% elif situation == 'need_reformulate' %}
+```json {"action_type":"EvaluateSubTaskAction", "situation": "need_reformulate", "advice": "{{advice_zh}}"} ```
+{% endif %}

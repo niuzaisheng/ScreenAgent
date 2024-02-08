@@ -1,0 +1,9 @@
+我能看到一个关于{{domain_zh}}、{{subdomain_zh}}的{{website_zh}}网页，我现在的目标是{{task_prompt_zh}}，
+根据我看到的屏幕我为这个目标设定了一些详细的计划：
+```json 
+[
+{% for item in sub_task_list_zh %}
+    {"action_type":"PlanAction","element":"{{ item }}"}{% if not loop.last %},{% endif %}
+{% endfor %}
+]
+```

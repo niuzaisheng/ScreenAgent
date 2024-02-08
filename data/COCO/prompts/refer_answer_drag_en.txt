@@ -1,0 +1,7 @@
+My plan is to drag draw a box of {{task_prompt}}, so my action will be:
+```json 
+[
+    {"action_type":"MouseAction","mouse_action_type":"move","mouse_position":{"width":{{drag_start_width}},"height":{{drag_start_height}}}},
+    {"action_type":"MouseAction","mouse_action_type":"drag","mouse_button":"left","mouse_position":{"width":{{drag_end_width}},"height":{{drag_end_height}}}}
+]
+```
