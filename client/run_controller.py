@@ -1,6 +1,6 @@
 import asyncio
+import asyncvnc
 import sys
-import gym_asyncvnc_qt
 
 import argparse
 import yaml
@@ -8,6 +8,8 @@ import yaml
 import qasync
 import functools
 from qasync import QApplication
+
+import controller_core
 from automaton import Automaton
 
 
@@ -15,7 +17,7 @@ def close_future(future, loop):
     loop.call_later(10, future.cancel)
     future.cancel()
 
-async def run_client():
+async def run_client(config):
 
     loop = asyncio.get_event_loop()
     future = asyncio.Future()
@@ -24,49 +26,47 @@ async def run_client():
     if hasattr(app, "aboutToQuit"):
         getattr(app, "aboutToQuit").connect(functools.partial(close_future, future, loop))
 
+    llm_api_client = None
+    api_config = config['llm_api']
 
+    if api_config.get("GPT4V", None):
+        from interface_api.gpt4_client import LanguageModelClient
+        llm_api_client = LanguageModelClient(api_config)
 
-    from fastchat_interface.gpt4_client import LanguageModelClient as LanguageModelClientGPT
-    from fastchat_interface.llava_llm_client import LLaVALanguageModelClient
-    from fastchat_interface.cogagent_llm_client import CogAgentLanguageModelClient
+    elif api_config.get("LLaVA", None):
+        from interface_api.llava_llm_client import LanguageModelClient
+        llm_api_client = LanguageModelClient(api_config)
 
+    elif api_config.get("CogAgent", None):
+        from interface_api.cogagent_llm_client import LanguageModelClient
+        llm_api_client = LanguageModelClient("CogAgent", api_config)
 
+    elif api_config.get("ScreenAgent", None):
+        from interface_api.cogagent_llm_client import LanguageModelClient
+        llm_api_client = LanguageModelClient("ScreenAgent", api_config)
 
-    # llm_client_gpt = LanguageModelClientGPT("gpt-4-vision-preview", "http://10.147.19.10:15000/forward")
-    # llm_client_gpt = LanguageModelClientGPT("gpt-4-vision-preview", "http://49.140.25.220:15000/forward")
-    # llm_client_gpt = LLaVALanguageModelClient("llava-v1.5-13b", "http://localhost:40001/worker_generate")
-    # llm_client_gpt = CogAgentLanguageModelClient("CogAgent", "http://localhost:40001/worker_generate")
-    llm_client_gpt = CogAgentLanguageModelClient("ScreenAgent", "http://localhost:41000/worker_generate")
-    # llm_client_fuyu = FuyuLanguageModelClient("adept/fuyu-8b", "http://localhost:40000/worker_generate")
-    llm_client_fuyu = None
+    else:
+        raise ValueError("No LLM API config found")
 
-    language = "en"
-    # language = "zh"
-    # operation_system = "win"
-    operation_system="linux"
-    automaton = Automaton(language, operation_system, asyncio_loop=loop)
+    assert llm_api_client is not None, "No LLM API client found"
 
-    use_remote_clipboard = True
+    automaton_config = config['automaton']
+    automaton = Automaton(automaton_config)
 
-    # win
-    ip, password, port, remote_clipboard_port = "10.147.19.10", "Ohch3Quugh", 5929, None
-    # ip, password, port, remote_clipboard_port = "49.140.25.220", "Ohch3Quugh", 5929, 8001
+    remote_vnc_server_config = config['remote_vnc_server']
 
-    remote_clipboard_ip = ip
-
-    if use_remote_clipboard:
+    if remote_vnc_server_config.get('use_remote_clipboard'):
         from action import KeyboardAction
-        KeyboardAction.set_remote_clipboard(remote_clipboard_ip, remote_clipboard_port)
-       
-    widget = gym_asyncvnc_qt.VNCWidget(ip=ip, port=port, password=password, save_base_dir=save_base_dir,
-                                       llm_client_gpt=llm_client_gpt, llm_client_fuyu=llm_client_fuyu,
-                                       automaton=automaton)
+        KeyboardAction.set_remote_clipboard(remote_vnc_server_config)
+        
+    widget = controller_core.VNCWidget(remote_vnc_server_config, llm_client = llm_api_client, automaton = automaton)
     widget.show()
+
     await future
 
 
 if __name__ == "__main__":
-    
+
     parser = argparse.ArgumentParser(description='Read YAML config file.')
     parser.add_argument('-c', '--config', type=str, required=True, help='Path to the YAML config file.')
     args = parser.parse_args()

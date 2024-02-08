@@ -1,0 +1,4 @@
+Open firefox browser
+Open the URL: https://Amazon.com/
+Search for the product: “Laptop”
+Open the Start Menu

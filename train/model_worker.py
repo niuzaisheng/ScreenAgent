@@ -27,7 +27,6 @@ from sat.model import AutoModel
 from utils.models import FineTuneTrainCogAgentModel
 from utils.utils import chat, llama2_tokenizer, llama2_text_processor, llama2_text_processor_inference, get_image_processor
 
-
 from logger_util import build_logger
 
 GB = 1 << 30

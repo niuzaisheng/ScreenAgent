@@ -9,8 +9,12 @@
 
 项目主要包括以下部分：
 ```
-├── client 客户端代码
+├── client 控制器客户端代码
+│   ├── prompt 提示词模版
+│   ├── config.yml 控制器客户端配置文件模版
+│   └── tasks.txt 任务列表
 ├── data 其中包含ScreenAgent数据集和其他视觉定位相关数据集
+├── model_workers 大模型推理器
 └── train 训练模型代码
 ```
 
@@ -58,6 +62,7 @@ export DISPLAY=:0.0
 
 具体请根据您的系统环境进行调整。如果还出现报错，请参考[这里](https://pyperclip.readthedocs.io/en/latest/introduction.html#not-implemented-error)。
 
+请将上面的信息填写到配置文件`client/config.yml`的`remote_vnc_server`项中。
 
 ## 第二步，准备控制器代码运行环境
 
@@ -69,17 +74,74 @@ pip install -r client/requirements.txt
 
 ## 第三步，准备大模型推理器或API
 
-如果需要
+请选择一种VLM作为Agent，我们在`model_workers`中提供了4种模型的推理器，分别是：GPT-4V、LLaVA-1.5、CogAgent和ScreenAgent。您也可以自己实现一个推理器或使用第三方API，您可以参考`client/interface_api`下的代码来实现新的API调用接口。
 
+请参考`client/config.yml`中的`llm_api`部分来准备配置文件，`llm_api` 下只保留一种模型即可。
 
-## 第四步，准备配置文件
+```yaml
+llm_api:
+
+  # Select ONE of the following models to use:
+
+  GPT4V:
+    model_name: "gpt-4-vision-preview"
+    openai_api_key: "<YOUR-OPENAI-API-KEY>"
+    target_url: "https://api.openai.com/v1/chat/completions"
+
+  LLaVA:
+    model_name: "LLaVA-1.5"
+    target_url: "http://localhost:40000/worker_generate"
+
+  CogAgent:
+    target_url: "http://localhost:40000/worker_generate"
+
+  ScreenAgent:
+    target_url: "http://localhost:40000/worker_generate"
+
+  # Common settings for all models
+  temperature: 1.0
+  top_p: 0.9
+  max_tokens: 500
+  
+```
+
+### 如果使用GPT-4V作为Agent
+
+请在`client/config.yml`中设置`llm_api`为`GPT4V`，并填写您的OpenAI API Key，请随时注意您的账户余额。
+
+### 如果使用LLaVA-1.5作为Agent
+
+请参考[LLaVA](https://github.com/haotian-liu/LLaVA)项目的来准备模型推理器，例如：
+
+```bash
+git clone https://github.com/haotian-liu/LLaVA.git
+cd LLaVA
+conda create -n llava python=3.10 -y
+conda activate llava
+pip install --upgrade pip  # enable PEP 660 support
+pip install -e .
+python -m llava.serve.model_worker --host 0.0.0.0 --port 40000 --worker http://localhost:40000 --model-path liuhaotian/llava-v1.5-13b --no-register
+```
 
 
 # 运行
-准备工作完成后，你可以运行控制器代码了：
+准备工作完成后，你可以运行控制器了：
+
+```bash
+cd client
+python run_controller.py -c config.yml
+```
+
+控制器界面如下，您需要先从左侧双击选择一个任务，然后按下“Start Automation”按钮，控制器会按照计划-行动-反思的流程自动运行，控制器会采集当前的屏幕画面、填充提示词模版、发送图像和完整提示词给大模型推理器、解析大模型推理器的回复、发送鼠标键盘控制命令给VNC Server，循环往复。
+
+![Controller](assets/VNC_Viewer_screenshot.png "The controller interface")
 
 
 # 训练
+如果你想训练自己的模型，或复现ScreenAgent模型，请参考`train`目录下的代码。
+
+
 
 # TODO
 - [ ] 简化控制器的设计，提供 no render 模式。
+- [ ] 集成Gym。
