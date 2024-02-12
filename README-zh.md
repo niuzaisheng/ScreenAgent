@@ -131,26 +131,22 @@ python -m llava.serve.llava_model_worker --host 0.0.0.0 --port 40000 --worker ht
 
 ### 如果使用CogAgent作为Agent
 
-请参考[CogVLM](https://github.com/THUDM/CogVLM)项目下载准备CogAgent模型，例如：
+请参考[CogVLM](https://github.com/THUDM/CogVLM)项目下载准备CogAgent模型，请在[这里](https://huggingface.co/THUDM/CogAgent/tree/main)下载sat版本的的CogAgent权重`cogagent-chat.zip`，解压后放到`train/saved_models/cogagent-chat`目录下。
+`train/cogagent_model_worker.py`提供了一个CogAgent非流式的输出的推理器，并使用以下命令来启动：
 
 ```bash
-git clone https://github.com/THUDM/CogVLM.git
-cd CogVLM
-conda create -n cogagent python=3.10 -y
-conda activate cogagent
-pip install -r requirements.txt
-```
-请在[这里](https://huggingface.co/THUDM/CogAgent/tree/main)下载sat版本的的CogAgent权重`cogagent-chat.zip`，解压后放到`CogVLM/checkpoints/`目录下。
-`model_workers/cogagent_model_worker.py`提供了一个CogAgent非流式的输出的推理器，您可以拷贝到`CogVLM/`下，并使用以下命令来启动：
-
-```bash
-cd CogVLM
-RANK=0 WORLD_SIZE=1 LOCAL_RANK=0 python ./model_worker.py --host 0.0.0.0  --port 40000 --from_pretrained "checkpoints/cogagent-chat" --bf16 --max_length 2048
+cd train
+RANK=0 WORLD_SIZE=1 LOCAL_RANK=0 python ./cogagent_model_worker.py --host 0.0.0.0  --port 40000 --from_pretrained "saved_models/cogagent-chat" --bf16 --max_length 2048
 ```
 
 ### 如果使用ScreenAgent作为Agent
 
-ScreenAgent是在CogAgent的基础上训练的，
+ScreenAgent是在CogAgent的基础上训练的，请到[这里](https://huggingface.co/niurl/ScreenAgent)下载sat格式的权重文件`ScreenAgent-2312.zip`，解压后放在`train/checkpoints/ScreenAgent-2312`，并使用以下命令来启动：
+
+```bash
+cd train
+RANK=0 WORLD_SIZE=1 LOCAL_RANK=0 python ./cogagent_model_worker.py --host 0.0.0.0  --port 40000 --from_pretrained "saved_models/ScreenAgent-2312" --bf16 --max_length 2048
+```
 
 # 运行
 准备工作完成后，你可以运行控制器了：
