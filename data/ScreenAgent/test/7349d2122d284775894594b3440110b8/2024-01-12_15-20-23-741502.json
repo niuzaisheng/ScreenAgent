@@ -1,0 +1,32 @@
+{
+    "task_prompt": "Insert a 5x6 table",
+    "send_prompt": "You're very familiar with the Windows operating system. Now you need to use the Windows operating system to complete a mission.\nYour goal now is to manipulate a computer screen, video width: 1024, video height: 768, the overall mission is: \"Insert a 5x6 table\".\n\nWe have developed an implementation plan for this overall mission:\n\n    1. Click on the 'Table' menu in the top toolbar.\n\n    2. Select 'Insert 5×6 Table' from the dropdown menu.\n\n\nThe current subtask is \"Click on the 'Table' menu in the top toolbar.\".\nYou can use the mouse and keyboard, the optional actions are:\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"double_click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"scroll_up\",\"scroll_repeat\":int},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"scroll_down\",\"scroll_repeat\":int},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"move\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"drag\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"KeyName in keysymdef\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Ctrl+A\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"text\",\"keyboard_text\": \"Hello, world!\"},\n    {\"action_type\":\"WaitAction\",\"wait_time\":float}\n]\n```\nWhere the mouse position is relative to the top-left corner of the screen, and the keyboard keys are described in [keysymdef.h].\n\nPlease make output execution actions, please format them in json, e.g. \nMy plan is to click the Windows button, it's on the left bottom corner, so my action will be:\n```json \n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":10,\"height\":760}}\n]\n```\n\nAnother example: \nMy plan is to open the notepad, so my action will be:\n```json\n[\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Super_L\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_text\":\"notepad\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Return\"}\n]\n```\n\n\nThe current subtask is \"Click on the 'Table' menu in the top toolbar.\", please give the detailed next actions based on the state of the existing screen image.",
+    "status": "acting",
+    "LLM_response": "The screenshot you provided appears to be from LibreOffice Writer, which is a word processor similar to Microsoft Word but not a part of the Windows operating system. The interface elements and icons may differ from those in Microsoft Office, but the task of inserting a table can be accomplished through similar actions. Based on the image and the task of clicking on the 'Table' menu in the top toolbar, I would estimate the Table menu's position and initiate a mouse click action there. Here is the action formatted in JSON:\n\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":500,\"height\":50}}\n]\n```\n\nPlease note that the mouse position provided is a rough estimation based on common interface layouts and may need to be adjusted depending on the actual interface elements and their positions on the screen.",
+    "LLM_response_editer": "Based on the screen information and the task of clicking on the \"Forms\" menu in the top toolbar, I will find the location of the Forms menu and initiate a mouse click action here. The following is the operation in JSON format:\n\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":640,\"height\":65}}\n]\n```",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2024-01-12_15-20-23-741502.jpg",
+    "current_task": "Click on the 'Table' menu in the top toolbar.",
+    "actions": [
+        {
+            "action_type": "MouseAction",
+            "mouse_action_type": "click",
+            "mouse_button": "left",
+            "mouse_position": {
+                "width": 640,
+                "height": 65
+            },
+            "clickable_area": {
+                "upper_left_position": {
+                    "width": 617,
+                    "height": 52
+                },
+                "lower_right_position": {
+                    "width": 661,
+                    "height": 79
+                }
+            }
+        }
+    ]
+}

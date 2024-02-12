@@ -10,9 +10,6 @@ export WORLD_SIZE=$num_processes
 export MASTER_ADDR=localhost
 export MASTER_PORT=60000
 
-export TRANSFORMERS_OFFLINE=1
-export HF_EVALUATE_OFFLINE=1
-
 export CUDA_LAUNCH_BLOCKING=1
 export TORCH_USE_CUDA_DSA=1
 
@@ -22,8 +19,9 @@ script_path=$(realpath $0)
 script_dir=$(dirname $script_path)
 main_dir=$(dirname $script_dir)
 MODEL_TYPE="cogagent-chat"
+JOB_NAME="ScreenAgent"
 VERSION="chat"
-experiment_name="$MODEL_TYPE-$SLURM_JOB_NAME"
+experiment_name="$MODEL_TYPE-$JOB_NAME"
 
 MODEL_ARGS="--from_pretrained $MODEL_TYPE \
     --max_length 2048 \

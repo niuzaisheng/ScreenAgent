@@ -1,0 +1,45 @@
+{
+    "task_prompt": "将C盘拆分出1GB为F盘",
+    "send_prompt": "您对 Windows 操作系统非常熟悉。您的任务是操作计算机屏幕，给出完成任务的计划。\n您能看到一个计算机屏幕，高度：768，宽度：1024，当前任务为\"将C盘拆分出1GB为F盘\"，您需要给出完成该目标的计划。\n请以 json 格式输出您的计划，例如，我的任务是在网络上搜索“麦田怪圈是怎么回事”，此任务的拆解步骤是：\n```json \n[\n    {\"action_type\":\"PlanAction\",\"element\":\"打开浏览器\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"在浏览器中搜索“麦田怪圈是怎么回事”\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"打开第一个搜索结果\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"浏览网页内容\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"根据内容回答“麦田怪圈是怎么回事”\"}\n]\n```\n\n另一个例子，我的任务是“在笔记本中写一段关于人工智能的简介”，此任务的拆解步骤是：\n```json\n[\n    {\"action_type\":\"PlanAction\",\"element\":\"打开笔记本\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"在笔记本中写一段关于人工智能的简介\"}\n]\n```\n\n\n现在，您的当前任务是 \"将C盘拆分出1GB为F盘\"，请根据现有屏幕图像的状态给出任务的拆解步骤。",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2024-01-06_17-47-12-497294.jpg",
+    "current_task": "点击屏幕左下角的搜索框",
+    "session_id": "task203",
+    "task_prompt_en": "Split disk C into 1GB disk F",
+    "task_prompt_zh": "将C盘拆分出1GB为F盘",
+    "send_prompt_en": "You are familiar with the Windows operating system. Your task is to operate the computer screen and give a plan to complete the task.\nYou can see a computer screen with a height of 768 and a width of 1024. The current task is to \"split the C disk from 1GB to F disk\". You need to give a plan to complete this goal.\nPlease output your plan in json format. For example, my task is to search the Internet for \"What's wrong with crop circles?\" The disassembly steps of this task are:```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Open Browser\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Search the browser for \\\"What's wrong with crop circles?\\\"\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Open the first search result\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Browse web content\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Answer \\\"What's wrong with crop circles\\\" according to the content\"}\n]\n```Another example, my task is to \"write a brief introduction to AI in my notebook\". The disassembly steps of this task are:```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Open Notebook\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Write a brief introduction to AI in your notebook\"}\n]\n```Now, your current task is to \"split the C disk from 1GB to F disk\". Please give the disassembly steps of the task according to the status of the existing screen image.",
+    "send_prompt_zh": "您对 Windows 操作系统非常熟悉。您的任务是操作计算机屏幕，给出完成任务的计划。\n您能看到一个计算机屏幕，高度：768，宽度：1024，当前任务为\"将C盘拆分出1GB为F盘\"，您需要给出完成该目标的计划。\n请以 json 格式输出您的计划，例如，我的任务是在网络上搜索“麦田怪圈是怎么回事”，此任务的拆解步骤是：\n```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"打开浏览器\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"在浏览器中搜索“麦田怪圈是怎么回事”\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"打开第一个搜索结果\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"浏览网页内容\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"根据内容回答“麦田怪圈是怎么回事”\"}\n]\n```\n\n另一个例子，我的任务是“在笔记本中写一段关于人工智能的简介”，此任务的拆解步骤是：\n```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"打开笔记本\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"在笔记本中写一段关于人工智能的简介\"}\n]\n```\n\n\n现在，您的当前任务是 \"将C盘拆分出1GB为F盘\"，请根据现有屏幕图像的状态给出任务的拆解步骤。",
+    "actions": [
+        {
+            "action_type": "PlanAction",
+            "element": "选择“压缩卷”"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "输入压缩空间的大小（1024MB）"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "点击压缩按钮后等待压缩过程完成"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "在未分配空间上右键"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "选择“新建简单卷”"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "按照新建简单卷向导步骤操作"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "分配卷标（如F盘）并完成格式化"
+        }
+    ],
+    "LLM_response_editer_en": "```json \n[\n\n    {\"action_type\":\"PlanAction\",\"element\":\"Select Compact Volume\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"Enter the size of compressed space (1024MB)\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"Click the compression button and wait for the compression process to complete\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"Right click on unallocated space\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"Select New Simple Volume\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"Follow the steps of the New Simple Volume Wizard\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"Allocate volume label (such as F disk) and complete formatting\"}\n\n]\n```",
+    "LLM_response_editer_zh": "```json \n[\n\n    {\"action_type\":\"PlanAction\",\"element\":\"选择“压缩卷”\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"输入压缩空间的大小（1024MB）\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"点击压缩按钮后等待压缩过程完成\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"在未分配空间上右键\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"选择“新建简单卷”\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"按照新建简单卷向导步骤操作\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"分配卷标（如F盘）并完成格式化\"}\n\n]\n```"
+}

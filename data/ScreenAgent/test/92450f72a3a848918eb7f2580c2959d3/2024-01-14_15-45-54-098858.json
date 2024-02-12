@@ -1,0 +1,21 @@
+{
+    "task_prompt": "Show ruler in an opened Word document",
+    "send_prompt": "You are familiar with the Windows operating system.\nYou can see a computer screen with height: 768, width: 1024, and the current task is \"Show ruler in an opened Word document\", you need to give a plan to accomplish this goal.\nPlease output your plan in json format, e.g. my task is to search the web for \"What's the deal with the Wheat Field Circle?\", the steps to disassemble this task are:\n```json \n[\n    {\"action_type\":\"PlanAction\",\"element\":\"Open web browser.\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Search in your browser for \\\"What's the deal with the Wheat Field Circle?\\\"\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Open the first search result\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Browse the content of the page\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Answer the question \\\"What's the deal with the Wheat Field Circle?\\\" according to the content.\"}\n]\n```\n\nAnother example, my task is \"Write a brief paragraph about artificial intelligence in a notebook\", the steps to disassemble this task are:\n``json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Open Notebook\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Write a brief paragraph about AI in the notebook\"}\n]\n```\n\nNow, your current task is \"Show ruler in an opened Word document\", give the disassembly steps of the task based on the state of the existing screen image.",
+    "status": "planning",
+    "LLM_response": "```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Maximize the Word window for better visibility if it's not already maximized.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Move the cursor to the 'View' tab on the Ribbon of the Word document.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Click on the 'View' tab.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Find the 'Show' group within the View tab.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Look for the 'Ruler' checkbox in the Show group.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Click on the 'Ruler' checkbox to display the ruler.\"}\n]\n```",
+    "LLM_response_editer": "```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Click on the 'View' tab.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Click on the 'Ruler' checkbox to display the ruler.\"}\n]\n```",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2024-01-14_15-45-54-098858.jpg",
+    "current_task": "Click on the 'View' tab.",
+    "actions": [
+        {
+            "action_type": "PlanAction",
+            "element": "Click on the 'View' tab."
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "Click on the 'Ruler' checkbox to display the ruler."
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "task_prompt": "Book a hotel in Sanya online",
+    "send_prompt": "You're very familiar with the Windows operating system. Now you need to use the Windows operating system to complete a mission.\nYour goal now is to manipulate a computer screen, video width: 1024, video height: 768, the overall mission is: \"Book a hotel in Sanya online\".\n\nWe have developed an implementation plan for this overall mission:\n\n    1. Double click on the Microsoft Edge icon to open the web browser.\n\n    2. Type in a hotel booking website  'Booking.com'.\n\n    3. On the website, enter 'Sanya' as the destination.\n\n    4. Specify the check-in and check-out dates for your stay.\n\n    5. Choose the number of guests and rooms needed.\n\n    6. Choose a person\n\n    7. Click on the 'Search' button to view available hotels.\n\n    8. Click the first hotel.\n\n    9. Click Reserve.\n\n    10. Click 'I'll Reserve'\n\n\nThe current subtask is \"Choose the number of guests and rooms needed.\".\nYou can use the mouse and keyboard, the optional actions are:\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"double_click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"scroll_up\",\"scroll_repeat\":int},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"scroll_down\",\"scroll_repeat\":int},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"move\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"drag\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"KeyName in keysymdef\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Ctrl+A\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"text\",\"keyboard_text\": \"Hello, world!\"},\n    {\"action_type\":\"WaitAction\",\"wait_time\":float}\n]\n```\nWhere the mouse position is relative to the top-left corner of the screen, and the keyboard keys are described in [keysymdef.h].\n\nPlease make output execution actions, please format them in json, e.g. \nMy plan is to click the Windows button, it's on the left bottom corner, so my action will be:\n```json \n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":10,\"height\":760}}\n]\n```\n\nAnother example: \nMy plan is to open the notepad, so my action will be:\n```json\n[\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Super_L\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_text\":\"notepad\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Return\"}\n]\n```\n\n\nThe current subtask is \"Choose the number of guests and rooms needed.\", please give the detailed next actions based on the state of the existing screen image.",
+    "status": "acting",
+    "LLM_response": "I can provide you with the execution actions that would typically be required to select the number of guests and rooms needed on a booking platform like Booking.com, based on the button positions and elements usually found on such websites.\n\nIn the given screenshot, the section to adjust the number of adults, children, and rooms is within a dropdown panel that is likely activated by clicking on the box summarizing the current selection – \"2 adults · 0 children · 1 room\". The exact coordinates of this box may vary depending on several factors like browser zoom level and screen resolution, however, I'll assume typical placement and provide a hypothetical action that represents clicking on this area to expand the options.\n\n```json\n[\n  {\"action_type\": \"MouseAction\", \"mouse_action_type\": \"click\", \"mouse_button\": \"left\", \"mouse_position\": {\"width\": 950, \"height\": 160}}\n]\n```\n\nOnce the dropdown is activated, you would usually have to perform additional clicks to increase or decrease the number of guests and rooms. However, without a live interactive view and the current dropdown state, I cannot provide the precise coordinates for these additional actions. You may need to click on \"+\" and \"-\" buttons near the corresponding options to select the required number of guests and rooms.\n\nIt is important to note that this action is hypothetical and the real coordinates should be determined by inspecting the live interface.",
+    "LLM_response_editer": "```json\n[\n  {\"action_type\": \"MouseAction\", \"mouse_action_type\": \"click\", \"mouse_button\": \"left\", \"mouse_position\": {\"width\": 758, \"height\": 214}}\n]\n```",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2024-01-14_19-31-36-298877.jpg",
+    "current_task": "Choose the number of guests and rooms needed.",
+    "actions": [
+        {
+            "action_type": "MouseAction",
+            "mouse_action_type": "click",
+            "mouse_button": "left",
+            "mouse_position": {
+                "width": 758,
+                "height": 214
+            },
+            "clickable_area": {
+                "upper_left_position": {
+                    "width": 626,
+                    "height": 197
+                },
+                "lower_right_position": {
+                    "width": 888,
+                    "height": 246
+                }
+            }
+        }
+    ]
+}

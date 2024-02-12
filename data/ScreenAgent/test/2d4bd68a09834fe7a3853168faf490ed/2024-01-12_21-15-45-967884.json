@@ -1,0 +1,17 @@
+{
+    "task_prompt": "View browser history",
+    "send_prompt": "You're very familiar with the Windows operating system and UI operations.\nYour current goal is to act as a reward model to judge whether or not this image meets the goal, video width: 1024, video height: 768, the overall mission is: \"View browser history\".\n\nWe have developed an implementation plan for this overall mission:\n\n    1. Open web browser (e.g., double-click on 'Firefox W...' icon on the desktop).\n\n    2. Once browser is open, access the browser history using keyboard shortcut 'Ctrl+H'\n\n    3. Click today for today's history\n\n\nNow the current subtask is: \"Click today for today's history\".\nPlease describe whether or not this image meets the current subtask, please answer json format:\nHere are a few options, if you think the current subtask is done well, then output this:\n```json  {\"action_type\":\"EvaluateSubTaskAction\", \"situation\": \"sub_task_success\"} ```\nThe mission will go on.\n\nIf you think the current subtask is not done well, need to retry, then output this:\n```json  {\"action_type\":\"EvaluateSubTaskAction\", \"situation\": \"need_retry\", \"advice\": \"I don't think you're clicking in the right place.\"} ```\nYou can give some suggestions for implementation improvements in the \"advice\" field.\n\nIf you feel that the whole plan does not match the current situation and you need to reformulate the implementation plan, please output:\n```json {\"action_type\":\"EvaluateSubTaskAction\", \"situation\": \"need_reformulate\", \"advice\": \"I think the current plan is not suitable for the current situation, because the system does not have .... installed\"} ```\nYou can give some suggestions for reformulating the plan in the \"advice\" field.\n\nPlease surround the json output with the symbols \"```json\" and \"```\".\nThe current goal is: \"View browser history\", please describe whether or not this image meets the goal in json format? And whether or not our mission can continue.",
+    "status": "evaluating",
+    "LLM_response": "```json\n{\"action_type\":\"EvaluateSubTaskAction\", \"situation\": \"sub_task_success\"}\n```",
+    "LLM_response_editer": "```json\n{\"action_type\":\"EvaluateSubTaskAction\", \"situation\": \"sub_task_success\"}\n```",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2024-01-12_21-15-45-967884.jpg",
+    "current_task": "Click today for today's history",
+    "actions": [
+        {
+            "action_type": "EvaluateSubTaskAction",
+            "situation": "sub_task_success"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "task_prompt": "Use terminal commands to delete a folder on the desktop",
+    "send_prompt": "You're very familiar with the Windows operating system and UI operations.\nYour current goal is to act as a reward model to judge whether or not this image meets the goal, video width: 1024, video height: 768, the overall mission is: \"Use terminal commands to delete a folder on the desktop\".\n\nWe have developed an implementation plan for this overall mission:\n\n    1. Navigate to the desktop directory using the command 'cd Desktop/'.\n\n    2. List the items on the desktop with the command 'ls' to view the folder you want to delete.\n\n    3. Use the command 'rm -r FOLDERNAME' to delete the folder, replacing 'FOLDERNAME' with the actual name of the folder.\n\n    4. Verify deletion by using the 'ls' command again to ensure the folder is deleted.\n\n\nNow the current subtask is: \"List the items on the desktop with the command 'ls' to view the folder you want to delete.\".\nPlease describe whether or not this image meets the current subtask, please answer json format:\nHere are a few options, if you think the current subtask is done well, then output this:\n```json  {\"action_type\":\"EvaluateSubTaskAction\", \"situation\": \"sub_task_success\"} ```\nThe mission will go on.\n\nIf you think the current subtask is not done well, need to retry, then output this:\n```json  {\"action_type\":\"EvaluateSubTaskAction\", \"situation\": \"need_retry\", \"advice\": \"I don't think you're clicking in the right place.\"} ```\nYou can give some suggestions for implementation improvements in the \"advice\" field.\n\nIf you feel that the whole plan does not match the current situation and you need to reformulate the implementation plan, please output:\n```json {\"action_type\":\"EvaluateSubTaskAction\", \"situation\": \"need_reformulate\", \"advice\": \"I think the current plan is not suitable for the current situation, because the system does not have .... installed\"} ```\nYou can give some suggestions for reformulating the plan in the \"advice\" field.\n\nPlease surround the json output with the symbols \"```json\" and \"```\".\nThe current goal is: \"Use terminal commands to delete a folder on the desktop\", please describe whether or not this image meets the goal in json format? And whether or not our mission can continue.",
+    "status": "evaluating",
+    "LLM_response": "```json\n{\n  \"action_type\": \"EvaluateSubTaskAction\",\n  \"situation\": \"sub_task_success\"\n}\n```",
+    "LLM_response_editer": "```json\n{\n  \"action_type\": \"EvaluateSubTaskAction\",\n  \"situation\": \"sub_task_success\"\n}\n```",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2024-01-13_14-15-06-095444.jpg",
+    "current_task": "Use the command 'rm -r FOLDERNAME' to delete the folder, replacing 'FOLDERNAME' with the actual name of the folder.",
+    "actions": [
+        {
+            "action_type": "EvaluateSubTaskAction",
+            "situation": "sub_task_success"
+        }
+    ]
+}

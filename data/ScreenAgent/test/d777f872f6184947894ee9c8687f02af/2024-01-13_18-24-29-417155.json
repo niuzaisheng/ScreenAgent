@@ -1,0 +1,32 @@
+{
+    "task_prompt": "Center the title of the presentation document",
+    "send_prompt": "You're very familiar with the Windows operating system. Now you need to use the Windows operating system to complete a mission.\nYour goal now is to manipulate a computer screen, video width: 1024, video height: 768, the overall mission is: \"Center the title of the presentation document\".\n\nWe have developed an implementation plan for this overall mission:\n\n    1. Click on the title text box containing 'Lorem'.\n\n    2. Select 'Format' in the toolbar.\n\n    3. Select 'Align Text'.\n\n    4. Select 'Center'.\n\n\nThe current subtask is \"Select 'Align Text'.\".\nYou can use the mouse and keyboard, the optional actions are:\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"double_click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"scroll_up\",\"scroll_repeat\":int},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"scroll_down\",\"scroll_repeat\":int},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"move\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"drag\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"KeyName in keysymdef\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Ctrl+A\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"text\",\"keyboard_text\": \"Hello, world!\"},\n    {\"action_type\":\"WaitAction\",\"wait_time\":float}\n]\n```\nWhere the mouse position is relative to the top-left corner of the screen, and the keyboard keys are described in [keysymdef.h].\n\nPlease make output execution actions, please format them in json, e.g. \nMy plan is to click the Windows button, it's on the left bottom corner, so my action will be:\n```json \n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":10,\"height\":760}}\n]\n```\n\nAnother example: \nMy plan is to open the notepad, so my action will be:\n```json\n[\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Super_L\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_text\":\"notepad\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Return\"}\n]\n```\n\n\nThe current subtask is \"Select 'Align Text'.\", please give the detailed next actions based on the state of the existing screen image.",
+    "status": "acting",
+    "LLM_response": "Based on the current subtask, which is to select 'Align Text', and by observing the screen image, here is the appropriate action to do so:\n\nThe 'Format' menu is already open, and the 'Align Text' option is visible within it. The next step is to click on the 'Align Text' option. Assuming that 'Align Text' is positioned around the middle of the screen - we will approximate the position since the exact position is not given in the image - the following JSON action would represent this mouse click action:\n\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":512,\"height\":384}}\n]\n```\nPlease note that height and width are estimated based on the center of the screen. If precision is required, then you would need to measure the exact position of the 'Align Text' option on the screen.",
+    "LLM_response_editer": "Based on the current subtask, which is to select 'Align Text', and by observing the screen image, here is the appropriate action to do so:\nThe 'Format' menu is already open, and the 'Align Text' option is visible within it. The next step is to click on the 'Align Text' option.The sequence of operations in JSON format is as follows:\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":300,\"height\":113}}\n]\n```",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2024-01-13_18-24-29-417155.jpg",
+    "current_task": "Select 'Align Text'.",
+    "actions": [
+        {
+            "action_type": "MouseAction",
+            "mouse_action_type": "click",
+            "mouse_button": "left",
+            "mouse_position": {
+                "width": 300,
+                "height": 113
+            },
+            "clickable_area": {
+                "upper_left_position": {
+                    "width": 185,
+                    "height": 100
+                },
+                "lower_right_position": {
+                    "width": 494,
+                    "height": 126
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "task_prompt": "Learn how to make braised intestines in brown sauce",
+    "send_prompt": "You're very familiar with the Windows operating system. Now you need to use the Windows operating system to complete a mission.\nYour goal now is to manipulate a computer screen, video width: 1024, video height: 768, the overall mission is: \"Learn how to make braised intestines in brown sauce\".\n\nWe have developed an implementation plan for this overall mission:\n\n    1. Double-click to open the web browser.\n\n    2. Enter bing\n\n    3. Type in \"How to make braised intestines in brown sauce\" and press Enter.\n\n    4. Browse search results for a reliable recipe and click to open it.\n\n    5. Read through the recipe and instructions carefully.\n\n\nThe current subtask is \"Double-click to open the web browser.\".\nYou can use the mouse and keyboard, the optional actions are:\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"double_click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"scroll_up\",\"scroll_repeat\":int},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"scroll_down\",\"scroll_repeat\":int},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"move\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"drag\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"KeyName in keysymdef\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Ctrl+A\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"text\",\"keyboard_text\": \"Hello, world!\"},\n    {\"action_type\":\"WaitAction\",\"wait_time\":float}\n]\n```\nWhere the mouse position is relative to the top-left corner of the screen, and the keyboard keys are described in [keysymdef.h].\n\nPlease make output execution actions, please format them in json, e.g. \nMy plan is to click the Windows button, it's on the left bottom corner, so my action will be:\n```json \n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":10,\"height\":760}}\n]\n```\n\nAnother example: \nMy plan is to open the notepad, so my action will be:\n```json\n[\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Super_L\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_text\":\"notepad\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Return\"}\n]\n```\n\n\nThe current subtask is \"Double-click to open the web browser.\", please give the detailed next actions based on the state of the existing screen image.",
+    "status": "acting",
+    "LLM_response": "Based on the state of the existing screen image which shows icons on the desktop, I will perform a double-click on the web browser icon labeled \"Firefox W...\" to open the browser. The icon is towards the upper-left corner of the screen. Here is the JSON formatted action:\n\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"double_click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":50,\"height\":50}}\n]\n```",
+    "LLM_response_editer": "Based on the state of the existing screen image which shows icons on the desktop, I will perform a double-click on the web browser icon labeled \"Firefox W...\" to open the browser. The icon is towards the upper-left corner of the screen. Here is the JSON formatted action:\n\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"double_click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":50,\"height\":50}}\n]\n```",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2024-01-13_17-52-59-922678.jpg",
+    "current_task": "Double-click to open the web browser.",
+    "actions": [
+        {
+            "action_type": "MouseAction",
+            "mouse_action_type": "double_click",
+            "mouse_button": "left",
+            "mouse_position": {
+                "width": 50,
+                "height": 50
+            },
+            "clickable_area": {
+                "upper_left_position": {
+                    "width": 15,
+                    "height": 6
+                },
+                "lower_right_position": {
+                    "width": 114,
+                    "height": 82
+                }
+            }
+        }
+    ]
+}

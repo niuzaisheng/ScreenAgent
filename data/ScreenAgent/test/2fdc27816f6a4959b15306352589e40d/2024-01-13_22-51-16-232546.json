@@ -1,0 +1,32 @@
+{
+    "task_prompt": "Select and add a smartphone to the shopping cart using the search bar on a shopping page",
+    "send_prompt": "You're very familiar with the Windows operating system. Now you need to use the Windows operating system to complete a mission.\nYour goal now is to manipulate a computer screen, video width: 1024, video height: 768, the overall mission is: \"Select and add a smartphone to the shopping cart using the search bar on a shopping page\".\n\nWe have developed an implementation plan for this overall mission:\n\n    1. Click on the search bar to activate the text field for typing.\n\n    2. Type the keyword 'smartphone' into the search bar.\n\n    3. Press the 'Enter' key or click on the search icon next to the search bar to initiate the search.\n\n    4. Select a smartphone by clicking on its image or link to view its details.\n\n    5. On the smartphone's detail page, locate and click the 'Add to Cart' button.\n\n\nThe current subtask is \"Select a smartphone by clicking on its image or link to view its details.\".\nYou can use the mouse and keyboard, the optional actions are:\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"double_click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"scroll_up\",\"scroll_repeat\":int},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"scroll_down\",\"scroll_repeat\":int},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"move\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"drag\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"KeyName in keysymdef\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Ctrl+A\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"text\",\"keyboard_text\": \"Hello, world!\"},\n    {\"action_type\":\"WaitAction\",\"wait_time\":float}\n]\n```\nWhere the mouse position is relative to the top-left corner of the screen, and the keyboard keys are described in [keysymdef.h].\n\nPlease make output execution actions, please format them in json, e.g. \nMy plan is to click the Windows button, it's on the left bottom corner, so my action will be:\n```json \n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":10,\"height\":760}}\n]\n```\n\nAnother example: \nMy plan is to open the notepad, so my action will be:\n```json\n[\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Super_L\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_text\":\"notepad\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Return\"}\n]\n```\n\n\nThe current subtask is \"Select a smartphone by clicking on its image or link to view its details.\", please give the detailed next actions based on the state of the existing screen image.",
+    "status": "acting",
+    "LLM_response": "To select a smartphone by clicking on its image or link to view its details, I would propose an action to move the mouse to the coordinates of one of the smartphone images and then click it. In the provided image, there are two smartphones visible, so I will choose the first one at the top.\n\nHere is the proposed action in JSON format, assuming the image of the first smartphone is around 300 pixels from the left and 250 pixels from the top of the screen. These values are just an estimate because the exact coordinates cannot be determined without specific information about the layout dimensions:\n\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":300,\"height\":250}}\n]\n``` \n\nPlease note that these coordinates are an approximation, and the actual values could differ depending on the actual layout and elements sizes on the web page.",
+    "LLM_response_editer": "To select a smartphone by clicking on its image or link to view its details, the JSON format operates as follows:\n\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":700,\"height\":305}}\n]\n``` \n",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2024-01-13_22-51-16-232546.jpg",
+    "current_task": "Select a smartphone by clicking on its image or link to view its details.",
+    "actions": [
+        {
+            "action_type": "MouseAction",
+            "mouse_action_type": "click",
+            "mouse_button": "left",
+            "mouse_position": {
+                "width": 700,
+                "height": 305
+            },
+            "clickable_area": {
+                "upper_left_position": {
+                    "width": 266,
+                    "height": 285
+                },
+                "lower_right_position": {
+                    "width": 830,
+                    "height": 518
+                }
+            }
+        }
+    ]
+}

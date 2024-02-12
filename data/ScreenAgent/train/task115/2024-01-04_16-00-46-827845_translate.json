@@ -1,0 +1,47 @@
+{
+    "task_prompt": "利用麦当劳的热量计算器计算巨无霸和双层吉士汉堡总共的热量",
+    "send_prompt": "您对 Linux 操作系统非常熟悉。您的任务是操作计算机屏幕，给出完成任务的计划。\n您能看到一个计算机屏幕，高度：768，宽度：1024，当前任务为\"利用麦当劳的热量计算器计算巨无霸和双层吉士汉堡总共的热量\"，您需要给出完成该目标的计划。\n请以 json 格式输出您的计划，例如，我的任务是在网络上搜索“麦田怪圈是怎么回事”，此任务的拆解步骤是：\n```json \n[\n    {\"action_type\":\"PlanAction\",\"element\":\"打开浏览器\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"在浏览器中搜索“麦田怪圈是怎么回事”\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"打开第一个搜索结果\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"浏览网页内容\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"根据内容回答“麦田怪圈是怎么回事”\"}\n]\n```\n\n另一个例子，我的任务是“在笔记本中写一段关于人工智能的简介”，此任务的拆解步骤是：\n```json\n[\n    {\"action_type\":\"PlanAction\",\"element\":\"打开笔记本\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"在笔记本中写一段关于人工智能的简介\"}\n]\n```\n\n\n现在，您的当前任务是 \"利用麦当劳的热量计算器计算巨无霸和双层吉士汉堡总共的热量\"，请根据现有屏幕图像的状态给出任务的拆解步骤。",
+    "LLM_response": "```json\n[\n    {\"action_type\":\"PlanAction\",\"element\":\"打开已加载的麦当劳热量计算器网页\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"在热量计算器中找到巨无霸\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"选择巨无霸以添加到热量计算列表中\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"在热量计算器中找到双层吉士汉堡\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"选择双层吉士汉堡以添加到热量计算列表中\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"查看列表确认产品已添加\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"查看并记录巨无霸和双层吉士汉堡的总热量\"}\n]\n```",
+    "LLM_response_editer": "```json\n[\n    {\"action_type\":\"PlanAction\",\"element\":\"打开已加载的麦当劳热量计算器网页\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"在选择种类中选择汉堡\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"在热量计算器中找到巨无霸\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"选择巨无霸以添加到热量计算列表中\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"在热量计算器中找到双层吉士汉堡\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"选择双层吉士汉堡以添加到热量计算列表中\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"查看并记录巨无霸和双层吉士汉堡的总热量\"}\n]\n```",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2024-01-04_16-00-46-827845.jpg",
+    "current_task": "打开已加载的麦当劳热量计算器网页",
+    "session_id": "task115",
+    "task_prompt_en": "Use McDonald's calorie calculator to calculate the total calories of Big Mac and double cheeseburger",
+    "task_prompt_zh": "利用麦当劳的热量计算器计算巨无霸和双层吉士汉堡总共的热量",
+    "send_prompt_en": "You are familiar with the Linux operating system. Your task is to operate the computer screen and give a plan to complete the task.\nYou can see a computer screen with a height of 768 and a width of 1024. The current task is to \"use McDonald's heat calculator to calculate the total heat of Big Mac and double cheeseburger\". You need to give a plan to complete this goal.\nPlease output your plan in json format. For example, my task is to search the Internet for \"What's wrong with crop circles?\" The disassembly steps of this task are:```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Open Browser\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Search the browser for \\\"What's wrong with crop circles?\\\"\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Open the first search result\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Browse web content\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Answer \\\"What's wrong with crop circles\\\" according to the content\"}\n]\n```Another example, my task is to \"write a brief introduction to AI in my notebook\". The disassembly steps of this task are:```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Open Notebook\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Write a brief introduction to AI in your notebook\"}\n]\n```Now, your current task is to \"calculate the total heat of Big Mac and double cheeseburger with McDonald's heat calculator\". Please give the disassembly steps of the task according to the status of the existing screen image.",
+    "send_prompt_zh": "您对 Linux 操作系统非常熟悉。您的任务是操作计算机屏幕，给出完成任务的计划。\n您能看到一个计算机屏幕，高度：768，宽度：1024，当前任务为\"利用麦当劳的热量计算器计算巨无霸和双层吉士汉堡总共的热量\"，您需要给出完成该目标的计划。\n请以 json 格式输出您的计划，例如，我的任务是在网络上搜索“麦田怪圈是怎么回事”，此任务的拆解步骤是：\n```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"打开浏览器\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"在浏览器中搜索“麦田怪圈是怎么回事”\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"打开第一个搜索结果\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"浏览网页内容\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"根据内容回答“麦田怪圈是怎么回事”\"}\n]\n```\n\n另一个例子，我的任务是“在笔记本中写一段关于人工智能的简介”，此任务的拆解步骤是：\n```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"打开笔记本\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"在笔记本中写一段关于人工智能的简介\"}\n]\n```\n\n\n现在，您的当前任务是 \"利用麦当劳的热量计算器计算巨无霸和双层吉士汉堡总共的热量\"，请根据现有屏幕图像的状态给出任务的拆解步骤。",
+    "actions": [
+        {
+            "action_type": "PlanAction",
+            "element": "打开已加载的麦当劳热量计算器网页"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "在选择种类中选择汉堡"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "在热量计算器中找到巨无霸"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "选择巨无霸以添加到热量计算列表中"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "在热量计算器中找到双层吉士汉堡"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "选择双层吉士汉堡以添加到热量计算列表中"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "查看并记录巨无霸和双层吉士汉堡的总热量"
+        }
+    ],
+    "LLM_response_editer_en": "```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Open the loaded McDonald's Calorimeter web page\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Select Hamburg from the selected categories\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Find the Big Mac in the Calorimeter\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Select Big Mac to add to the heat calculation list\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Find the double cheeseburger in the heat calculator\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Select double cheeseburger to add to the heat calculation list\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"View and record the total calories of Big Mac and double cheeseburger\"}\n]\n```",
+    "LLM_response_editer_zh": "```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"打开已加载的麦当劳热量计算器网页\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"在选择种类中选择汉堡\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"在热量计算器中找到巨无霸\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"选择巨无霸以添加到热量计算列表中\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"在热量计算器中找到双层吉士汉堡\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"选择双层吉士汉堡以添加到热量计算列表中\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"查看并记录巨无霸和双层吉士汉堡的总热量\"}\n]\n```"
+}

@@ -1,0 +1,56 @@
+{
+    "task_prompt": "请在亚马逊网站搜索女士衬衫并选择合适的尺码以及颜色加入购物车",
+    "send_prompt": "您对 Linux 操作系统非常熟悉。您的任务是操作计算机屏幕，给出完成任务的计划。\n您能看到一个计算机屏幕，高度：768，宽度：1024，当前任务为\"请在亚马逊网站搜索女士衬衫并选择合适的尺码以及颜色加入购物车\"，您需要给出完成该目标的计划。\n请以 json 格式输出您的计划，例如，我的任务是在网络上搜索“麦田怪圈是怎么回事”，此任务的拆解步骤是：\n```json \n[\n    {\"action_type\":\"PlanAction\",\"element\":\"打开浏览器\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"在浏览器中搜索“麦田怪圈是怎么回事”\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"打开第一个搜索结果\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"浏览网页内容\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"根据内容回答“麦田怪圈是怎么回事”\"}\n]\n```\n\n另一个例子，我的任务是“在笔记本中写一段关于人工智能的简介”，此任务的拆解步骤是：\n```json\n[\n    {\"action_type\":\"PlanAction\",\"element\":\"打开笔记本\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"在笔记本中写一段关于人工智能的简介\"}\n]\n```\n\n\n现在，您的当前任务是 \"请在亚马逊网站搜索女士衬衫并选择合适的尺码以及颜色加入购物车\"，请根据现有屏幕图像的状态给出任务的拆解步骤。",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2023-12-23_15-12-00-546475.jpg",
+    "session_id": "4f1b60934cf5401c9db4122e3c512e9c",
+    "task_prompt_en": "Please search Amazon for blouses and select the appropriate size and color to add to the shopping cart",
+    "task_prompt_zh": "请在亚马逊网站搜索女士衬衫并选择合适的尺码以及颜色加入购物车",
+    "send_prompt_en": "You are familiar with the Linux operating system. Your task is to operate the computer screen and give a plan to complete the task.\nYou can see a computer screen with a height of 768 and a width of 1024. The current task is \"Please search Amazon for women's shirts and select the appropriate size and color to add to the shopping cart\". You need to give a plan to complete this goal.\nPlease output your plan in json format. For example, my task is to search the Internet for \"What's wrong with crop circles?\" The disassembly steps of this task are:```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Open Browser\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Search the browser for \\\"What's wrong with crop circles?\\\"\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Open the first search result\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Browse web content\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Answer \\\"What's wrong with crop circles\\\" according to the content\"}\n]\n```Another example, my task is to \"write a brief introduction to AI in my notebook\". The disassembly steps of this task are:```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Open Notebook\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Write a brief introduction to AI in your notebook\"}\n]\n```Now, your current task is \"Please search Amazon for blouses and select the appropriate size and color to add to the shopping cart\". Please give the disassembly steps of the task according to the status of the existing screen image.",
+    "send_prompt_zh": "您对 Linux 操作系统非常熟悉。您的任务是操作计算机屏幕，给出完成任务的计划。\n您能看到一个计算机屏幕，高度：768，宽度：1024，当前任务为\"请在亚马逊网站搜索女士衬衫并选择合适的尺码以及颜色加入购物车\"，您需要给出完成该目标的计划。\n请以 json 格式输出您的计划，例如，我的任务是在网络上搜索“麦田怪圈是怎么回事”，此任务的拆解步骤是：\n```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"打开浏览器\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"在浏览器中搜索“麦田怪圈是怎么回事”\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"打开第一个搜索结果\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"浏览网页内容\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"根据内容回答“麦田怪圈是怎么回事”\"}\n]\n```\n\n另一个例子，我的任务是“在笔记本中写一段关于人工智能的简介”，此任务的拆解步骤是：\n```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"打开笔记本\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"在笔记本中写一段关于人工智能的简介\"}\n]\n```\n\n\n现在，您的当前任务是 \"请在亚马逊网站搜索女士衬衫并选择合适的尺码以及颜色加入购物车\"，请根据现有屏幕图像的状态给出任务的拆解步骤。",
+    "actions": [
+        {
+            "action_type": "PlanAction",
+            "element": "双击打开浏览器"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "浏览器中输入亚马逊网址"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "按回车进入亚马逊网站"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "在亚马逊搜索栏输入“女士衬衫”"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "按回车进行搜索"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "浏览搜索结果，并选择一个喜欢的衬衫"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "点击衬衫进入商品详情页面"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "选择合适的尺码"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "选择喜欢的颜色"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "加入购物车"
+        }
+    ],
+    "LLM_response_editer_en": "```json \n[\n\n    {\"action_type\":\"PlanAction\",\"element\":\"Double click to open browser\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"Enter Amazon website in browser\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"Press Enter to enter Amazon website\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"Enter \"blouse\" in Amazon search field\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"Press Enter to search\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"Browse the search results and select a favorite shirt\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"Click the shirt to enter the product details page\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"Choose the right size\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"Choose your favorite color\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"Add to cart\"}\n\n]\n```",
+    "LLM_response_editer_zh": "```json \n[\n\n    {\"action_type\":\"PlanAction\",\"element\":\"双击打开浏览器\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"浏览器中输入亚马逊网址\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"按回车进入亚马逊网站\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"在亚马逊搜索栏输入“女士衬衫”\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"按回车进行搜索\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"浏览搜索结果，并选择一个喜欢的衬衫\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"点击衬衫进入商品详情页面\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"选择合适的尺码\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"选择喜欢的颜色\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"加入购物车\"}\n\n]\n```"
+}

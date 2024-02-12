@@ -1,0 +1,69 @@
+{
+    "task_prompt": "Find the top 5 most profitable days in the financial_data table",
+    "send_prompt": "You're very familiar with the Windows operating system. Now you need to use the Windows operating system to complete a mission.\nYour goal now is to manipulate a computer screen, video width: 1024, video height: 768, the overall mission is: \"Find the top 5 most profitable days in the financial_data table\".\n\nWe have developed an implementation plan for this overall mission:\n\n    1. Select all data in Profit (column F).\n\n    2. Click the descending order button on the toolbar.\n\n    3. Select Extended Sort Range.\n\n    4. See the 5 most profitable days.\n\n\nThe current subtask is \"See the 5 most profitable days.\".\nYou can use the mouse and keyboard, the optional actions are:\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"double_click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"scroll_up\",\"scroll_repeat\":int},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"scroll_down\",\"scroll_repeat\":int},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"move\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"drag\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"KeyName in keysymdef\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Ctrl+A\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"text\",\"keyboard_text\": \"Hello, world!\"},\n    {\"action_type\":\"WaitAction\",\"wait_time\":float}\n]\n```\nWhere the mouse position is relative to the top-left corner of the screen, and the keyboard keys are described in [keysymdef.h].\n\nPlease make output execution actions, please format them in json, e.g. \nMy plan is to click the Windows button, it's on the left bottom corner, so my action will be:\n```json \n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":10,\"height\":760}}\n]\n```\n\nAnother example: \nMy plan is to open the notepad, so my action will be:\n```json\n[\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Super_L\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_text\":\"notepad\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Return\"}\n]\n```\n\n\nThe current subtask is \"See the 5 most profitable days.\", please give the detailed next actions based on the state of the existing screen image.",
+    "status": "acting",
+    "LLM_response": "To complete the subtask \"See the 5 most profitable days\", you would observe the first five rows of data in the Profit column (column F) of the spreadsheet. As the data has already been sorted in descending order as per the previous steps, the top 5 rows will represent the most profitable days.\n\nHowever, since I can't physically interact with the computer, I can guide you to look at the screen image. You should look at the cells in column F from F2 to F6 to view the 5 most profitable days. To assist you or someone else performing this on a computer, the hypothetical actions in JSON format would be to move the mouse to bring the top 5 rows into view if they were not already visible. Assuming the rows are visible, no action is required. Here is an example action, even though no action is necessary:\n\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"move\",\"mouse_position\":{\"width\":1024,\"height\":50}}\n]\n```\nThis action would move the mouse cursor to the middle of the first row where the data is visible, assuming a standard taskbar height. It is for demonstration purposes only since no action is needed to just view the data on the screen.",
+    "LLM_response_editer": "To complete the subtask View the 5 Most Profitable Days, you need to look at the first 5 rows of data in the Profit column (Column A) of the spreadsheet. Since the data has been sorted in descending order according to the previous steps, the first 5 rows represent the most profitable days.The JSON formatting operation is as follows:\n\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\": \"click\", \"mouse_position\": {\"width\":696, \"height\": 308}, \"mouse_button\": \"left\"},\n    {\"action_type\": \"MouseAction\", \"mouse_action_type\": \"move\", \"mouse_position\": {\"width\": 50, \"height\": 197}},\n    {\"action_type\": \"MouseAction\", \"mouse_action_type\": \"drag\", \"mouse_button\": \"left\", \"mouse_position\": {\"width\": 83, \"height\": 268}}\n]\n```",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2024-01-13_14-19-06-247518.jpg",
+    "current_task": "See the 5 most profitable days.",
+    "actions": [
+        {
+            "action_type": "MouseAction",
+            "mouse_action_type": "click",
+            "mouse_button": "left",
+            "mouse_position": {
+                "width": 696,
+                "height": 308
+            },
+            "clickable_area": {
+                "upper_left_position": {
+                    "width": 434,
+                    "height": 177
+                },
+                "lower_right_position": {
+                    "width": 958,
+                    "height": 690
+                }
+            }
+        },
+        {
+            "action_type": "MouseAction",
+            "mouse_action_type": "move",
+            "mouse_position": {
+                "width": 50,
+                "height": 197
+            },
+            "clickable_area": {
+                "upper_left_position": {
+                    "width": 41,
+                    "height": 195
+                },
+                "lower_right_position": {
+                    "width": 144,
+                    "height": 210
+                }
+            }
+        },
+        {
+            "action_type": "MouseAction",
+            "mouse_action_type": "drag",
+            "mouse_button": "left",
+            "mouse_position": {
+                "width": 83,
+                "height": 268
+            },
+            "clickable_area": {
+                "upper_left_position": {
+                    "width": 46,
+                    "height": 195
+                },
+                "lower_right_position": {
+                    "width": 120,
+                    "height": 279
+                }
+            }
+        }
+    ]
+}

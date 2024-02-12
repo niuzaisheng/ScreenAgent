@@ -1,0 +1,58 @@
+{
+    "task_prompt": "打开fire fox浏览器，搜索关于香蕉的图片，并选择一张下载到桌面，图片命名为“banana”",
+    "send_prompt": "您对 Linux 操作系统非常熟悉。您的任务是操作计算机屏幕，给出完成任务的计划。\n您能看到一个计算机屏幕，高度：768，宽度：1024，当前任务为\"打开fire fox浏览器，搜索关于香蕉的图片，并选择一张下载到桌面，图片命名为“banana”\"，您需要给出完成该目标的计划。\n请以 json 格式输出您的计划，例如，我的任务是在网络上搜索“麦田怪圈是怎么回事”，此任务的拆解步骤是：\n```json \n[\n    {\"action_type\":\"PlanAction\",\"element\":\"打开浏览器\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"在浏览器中搜索“麦田怪圈是怎么回事”\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"打开第一个搜索结果\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"浏览网页内容\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"根据内容回答“麦田怪圈是怎么回事”\"}\n]\n```\n\n另一个例子，我的任务是“在笔记本中写一段关于人工智能的简介”，此任务的拆解步骤是：\n```json\n[\n    {\"action_type\":\"PlanAction\",\"element\":\"打开笔记本\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"在笔记本中写一段关于人工智能的简介\"}\n]\n```\n\n\n现在，您的当前任务是 \"打开fire fox浏览器，搜索关于香蕉的图片，并选择一张下载到桌面，图片命名为“banana”\"，请根据现有屏幕图像的状态给出任务的拆解步骤。",
+    "LLM_response": "Based on the given task and the current state of the desktop shown in the image, here is the step-by-step plan to accomplish the task in JSON format:\n\n```json\n[\n    {\"action_type\":\"PlanAction\",\"element\":\"Locate the Firefox Web Browser icon on the desktop\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Double-click the Firefox Web Browser icon to open it\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Once Firefox is open, click on the address bar\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Type in a search query for 'banana images'\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Press Enter to execute the search\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Browse through the search results to find a suitable image of a banana\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Right-click on the selected image\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Click on 'Save Image As...' option from the context menu\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"When the file dialog opens, navigate to the Desktop location\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Type 'banana' as the file name\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Click on the 'Save' button to download the image to the desktop\"}\n]\n``` \n\nPlease note that the exact text to enter in the search bar may vary depending on the search engine default settings in Firefox. Additionally, the options shown in",
+    "LLM_response_editer": "根据给定的任务和当前屏幕信息，这是完成这个任务的分步计划：\n```json\n[\n    \n    {\"action_type\":\"PlanAction\",\"element\":\"双击火狐浏览器以打开\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"点击搜索栏\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"输入文本'香蕉图片'\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"按回车键进行搜索\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"从搜索结果中点击一张最满意的图片\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"在图片上右键单击\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"在上下文菜单中单击 'Save Image As...'选项\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"选择保存位置为Desktop\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"输入文本 'banana' 作为文件名\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"点击 'Save'按钮下载图片到桌面\"}\n]\n``` ",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2024-01-04_15-24-28-144877.jpg",
+    "session_id": "task020",
+    "task_prompt_en": "Open the fire fox browser, search for pictures about bananas, and select one to download to the desktop. The picture is named \"banana\"",
+    "task_prompt_zh": "打开fire fox浏览器，搜索关于香蕉的图片，并选择一张下载到桌面，图片命名为“banana”",
+    "send_prompt_en": "You are familiar with the Linux operating system. Your task is to operate the computer screen and give a plan to complete the task.\nYou can see a computer screen with a height of 768 and a width of 1024. The current task is to \"open the fire fox browser, search for pictures about bananas, and select a picture to download to the desktop. The picture is named\" banana \". You need to give a plan to complete this goal.\nPlease output your plan in json format. For example, my task is to search the Internet for \"What's wrong with crop circles?\" The disassembly steps of this task are:```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Open Browser\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Search the browser for \\\"What's wrong with crop circles?\\\"\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Open the first search result\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Browse web content\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Answer \\\"What's wrong with crop circles\\\" according to the content\"}\n]\n```Another example, my task is to \"write a brief introduction to AI in my notebook\". The disassembly steps of this task are:```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Open Notebook\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Write a brief introduction to AI in your notebook\"}\n]\n```Now, your current task is \"open the fire fox browser, search for pictures about bananas, and select one to download to the desktop. The picture is named\" banana \". Please give the disassembly steps of the task according to the status of the existing screen image.",
+    "send_prompt_zh": "您对 Linux 操作系统非常熟悉。您的任务是操作计算机屏幕，给出完成任务的计划。\n您能看到一个计算机屏幕，高度：768，宽度：1024，当前任务为\"打开fire fox浏览器，搜索关于香蕉的图片，并选择一张下载到桌面，图片命名为“banana”\"，您需要给出完成该目标的计划。\n请以 json 格式输出您的计划，例如，我的任务是在网络上搜索“麦田怪圈是怎么回事”，此任务的拆解步骤是：\n```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"打开浏览器\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"在浏览器中搜索“麦田怪圈是怎么回事”\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"打开第一个搜索结果\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"浏览网页内容\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"根据内容回答“麦田怪圈是怎么回事”\"}\n]\n```\n\n另一个例子，我的任务是“在笔记本中写一段关于人工智能的简介”，此任务的拆解步骤是：\n```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"打开笔记本\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"在笔记本中写一段关于人工智能的简介\"}\n]\n```\n\n\n现在，您的当前任务是 \"打开fire fox浏览器，搜索关于香蕉的图片，并选择一张下载到桌面，图片命名为“banana”\"，请根据现有屏幕图像的状态给出任务的拆解步骤。",
+    "actions": [
+        {
+            "action_type": "PlanAction",
+            "element": "双击火狐浏览器以打开"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "点击搜索栏"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "输入文本'香蕉图片'"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "按回车键进行搜索"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "从搜索结果中点击一张最满意的图片"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "在图片上右键单击"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "在上下文菜单中单击 'Save Image As...'选项"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "选择保存位置为Desktop"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "输入文本 'banana' 作为文件名"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "点击 'Save'按钮下载图片到桌面"
+        }
+    ],
+    "LLM_response_editer_en": "According to the given task and current screen information, this is a step-by-step plan to complete this task:```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Double click Firefox to open\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Click the search bar\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Enter the text 'banana picture'\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Press Enter to search\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Click the most satisfactory picture from the search results\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Right click on the picture\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Click the 'Save Image As...' option in the context menu\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Select the save location as Desktop\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Enter the text 'banana' as the file name\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Click the 'Save' button to download the picture to the desktop\"}\n]\n``` ",
+    "LLM_response_editer_zh": "根据给定的任务和当前屏幕信息，这是完成这个任务的分步计划：\n```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"双击火狐浏览器以打开\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"点击搜索栏\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"输入文本'香蕉图片'\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"按回车键进行搜索\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"从搜索结果中点击一张最满意的图片\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"在图片上右键单击\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"在上下文菜单中单击 'Save Image As...'选项\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"选择保存位置为Desktop\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"输入文本 'banana' 作为文件名\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"点击 'Save'按钮下载图片到桌面\"}\n]\n``` "
+}

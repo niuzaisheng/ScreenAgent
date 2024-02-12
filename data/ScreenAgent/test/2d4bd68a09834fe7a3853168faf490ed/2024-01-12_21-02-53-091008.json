@@ -1,0 +1,25 @@
+{
+    "task_prompt": "View browser history",
+    "send_prompt": "You are familiar with the Windows operating system.\nYou can see a computer screen with height: 768, width: 1024, and the current task is \"View browser history\", you need to give a plan to accomplish this goal.\nPlease output your plan in json format, e.g. my task is to search the web for \"What's the deal with the Wheat Field Circle?\", the steps to disassemble this task are:\n```json \n[\n    {\"action_type\":\"PlanAction\",\"element\":\"Open web browser.\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Search in your browser for \\\"What's the deal with the Wheat Field Circle?\\\"\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Open the first search result\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Browse the content of the page\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Answer the question \\\"What's the deal with the Wheat Field Circle?\\\" according to the content.\"}\n]\n```\n\nAnother example, my task is \"Write a brief paragraph about artificial intelligence in a notebook\", the steps to disassemble this task are:\n``json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Open Notebook\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Write a brief paragraph about AI in the notebook\"}\n]\n```\n\nNow, your current task is \"View browser history\", give the disassembly steps of the task based on the state of the existing screen image.",
+    "status": "planning",
+    "LLM_response": "```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Open web browser (e.g., double-click on 'Firefox W...' icon on the desktop).\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Once browser is open, access the browser history using keyboard shortcut 'Ctrl+H' or by clicking on the browser menu and selecting 'History'.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"View and browse through the browser history as needed.\"}\n]\n```",
+    "LLM_response_editer": "```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Open web browser (e.g., double-click on 'Firefox W...' icon on the desktop).\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Once browser is open, access the browser history using keyboard shortcut 'Ctrl+H'\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Click today for today's history\"}\n]\n```",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2024-01-12_21-02-53-091008.jpg",
+    "current_task": "Open web browser (e.g., double-click on 'Firefox W...' icon on the desktop).",
+    "actions": [
+        {
+            "action_type": "PlanAction",
+            "element": "Open web browser (e.g., double-click on 'Firefox W...' icon on the desktop)."
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "Once browser is open, access the browser history using keyboard shortcut 'Ctrl+H'"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "Click today for today's history"
+        }
+    ]
+}

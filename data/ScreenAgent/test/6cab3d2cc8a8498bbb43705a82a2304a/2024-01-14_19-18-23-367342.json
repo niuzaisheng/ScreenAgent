@@ -1,0 +1,53 @@
+{
+    "task_prompt": "Book a hotel in Sanya online",
+    "send_prompt": "You are familiar with the Windows operating system.\nYou can see a computer screen with height: 768, width: 1024, and the current task is \"Book a hotel in Sanya online\", you need to give a plan to accomplish this goal.\nPlease output your plan in json format, e.g. my task is to search the web for \"What's the deal with the Wheat Field Circle?\", the steps to disassemble this task are:\n```json \n[\n    {\"action_type\":\"PlanAction\",\"element\":\"Open web browser.\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Search in your browser for \\\"What's the deal with the Wheat Field Circle?\\\"\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Open the first search result\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Browse the content of the page\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Answer the question \\\"What's the deal with the Wheat Field Circle?\\\" according to the content.\"}\n]\n```\n\nAnother example, my task is \"Write a brief paragraph about artificial intelligence in a notebook\", the steps to disassemble this task are:\n``json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Open Notebook\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Write a brief paragraph about AI in the notebook\"}\n]\n```\n\nNow, your current task is \"Book a hotel in Sanya online\", give the disassembly steps of the task based on the state of the existing screen image.",
+    "status": "planning",
+    "LLM_response": "```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Move cursor to the Microsoft Edge icon on the desktop.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Double click on the Microsoft Edge icon to open the web browser.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Once the browser is open, move the cursor to the address bar.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Type in a hotel booking website or search engine like 'Booking.com' or 'Hotels.com'.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Press Enter to navigate to the website.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"On the website, use the search function to enter 'Sanya' as the destination.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Specify the check-in and check-out dates for your stay.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Choose the number of guests and rooms needed.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Click on the 'Search' button to view available hotels.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Browse through the list of hotels, comparing prices and amenities.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Select a hotel that meets your preferences and budget.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"",
+    "LLM_response_editer": "```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Double click on the Microsoft Edge icon to open the web browser.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Type in a hotel booking website  'Booking.com'.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"On the website, enter 'Sanya' as the destination.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Specify the check-in and check-out dates for your stay.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Choose the number of guests and rooms needed.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Choose a person\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Click on the 'Search' button to view available hotels.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Click the first hotel.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Click Reserve.\"},\n   {\"action_type\": \"PlanAction\", \"element\": \"Click 'I'll Reserve'\"}\n]\n```",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2024-01-14_19-18-23-367342.jpg",
+    "current_task": "Double click on the Microsoft Edge icon to open the web browser.",
+    "actions": [
+        {
+            "action_type": "PlanAction",
+            "element": "Double click on the Microsoft Edge icon to open the web browser."
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "Type in a hotel booking website  'Booking.com'."
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "On the website, enter 'Sanya' as the destination."
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "Specify the check-in and check-out dates for your stay."
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "Choose the number of guests and rooms needed."
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "Choose a person"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "Click on the 'Search' button to view available hotels."
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "Click the first hotel."
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "Click Reserve."
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "Click 'I'll Reserve'"
+        }
+    ]
+}

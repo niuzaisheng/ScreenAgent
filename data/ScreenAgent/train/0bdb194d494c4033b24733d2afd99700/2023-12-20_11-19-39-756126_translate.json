@@ -1,0 +1,54 @@
+{
+    "task_prompt": "请写一个FastAPI的Hello World程序",
+    "send_prompt": "您对 Linux 操作系统非常熟悉。您的任务是操作计算机屏幕，给出完成任务的计划。\n您能看到一个计算机屏幕，高度：768，宽度：1024，当前任务为\"请写一个FastAPI的Hello World程序\"，您需要给出完成该目标的计划。\n请以 json 格式输出您的计划，例如，我的任务是在网络上搜索“麦田怪圈是怎么回事”，此任务的拆解步骤是：\n```json \n[\n    {\"action_type\":\"PlanAction\",\"element\":\"打开浏览器\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"在浏览器中搜索“麦田怪圈是怎么回事”\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"打开第一个搜索结果\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"浏览网页内容\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"根据内容回答“麦田怪圈是怎么回事”\"}\n]\n```\n\n另一个例子，我的任务是“在笔记本中写一段关于人工智能的简介”，此任务的拆解步骤是：\n```json\n[\n    {\"action_type\":\"PlanAction\",\"element\":\"打开笔记本\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"在笔记本中写一段关于人工智能的简介\"}\n]\n```\n\n\n现在，您的当前任务是 \"请写一个FastAPI的Hello World程序\"，请根据现有屏幕图像的状态给出任务的拆解步骤。",
+    "LLM_response": "I cannot view images directly. However, assuming that the image depicts a computer screen with a code editor open (since you've mentioned Visual Studio Code) and a file named \"fastapi_test.py\" ready to be edited, here is a JSON-format plan to write a \"Hello World\" program using FastAPI:\n\n```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"确认FastAPI包已安装\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"导入FastAPI和uvicorn库\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"创建FastAPI实例\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"定义路由装饰器及视图函数返回'Hello World'\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"指定应用运行的主机和端口\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"运行uvicorn服务器以启动应用\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"测试应用已正确返回'Hello World'信息\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"保存文件\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"执行保存的FastAPI应用程序\"}\n]\n```",
+    "LLM_response_editer": "I cannot view images directly. However, assuming that the image depicts a computer screen with a code editor open (since you've mentioned Visual Studio Code) and a file named \"fastapi_test.py\" ready to be edited, here is a JSON-format plan to write a \"Hello World\" program using FastAPI:\n\n```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"确认FastAPI包已安装\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"导入FastAPI和uvicorn库\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"创建FastAPI实例\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"定义路由装饰器及视图函数返回'Hello World'\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"指定应用运行的主机和端口\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"运行uvicorn服务器以启动应用\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"测试应用已正确返回'Hello World'信息\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"保存文件\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"执行保存的FastAPI应用程序\"}\n]\n```",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2023-12-20_11-19-39-756126.jpg",
+    "session_id": "0bdb194d494c4033b24733d2afd99700",
+    "task_prompt_en": "Please write a Hello World program of FastAPI",
+    "task_prompt_zh": "请写一个FastAPI的Hello World程序",
+    "send_prompt_en": "You are familiar with the Linux operating system. Your task is to operate the computer screen and give a plan to complete the task.\nYou can see a computer screen with a height of 768 and a width of 1024. The current task is \"Please write a FastAPI Hello World program\". You need to give a plan to complete this goal.\nPlease output your plan in json format. For example, my task is to search the Internet for \"What's wrong with crop circles?\" The disassembly steps of this task are:```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Open Browser\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Search the browser for \\\"What's wrong with crop circles?\\\"\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Open the first search result\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Browse web content\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Answer \\\"What's wrong with crop circles\\\" according to the content\"}\n]\n```Another example, my task is to \"write a brief introduction to AI in my notebook\". The disassembly steps of this task are:```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Open Notebook\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Write a brief introduction to AI in your notebook\"}\n]\n```Now, your current task is \"Please write a FastAPI Hello World program\". Please give the disassembly steps of the task according to the status of the existing screen image.",
+    "send_prompt_zh": "您对 Linux 操作系统非常熟悉。您的任务是操作计算机屏幕，给出完成任务的计划。\n您能看到一个计算机屏幕，高度：768，宽度：1024，当前任务为\"请写一个FastAPI的Hello World程序\"，您需要给出完成该目标的计划。\n请以 json 格式输出您的计划，例如，我的任务是在网络上搜索“麦田怪圈是怎么回事”，此任务的拆解步骤是：\n```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"打开浏览器\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"在浏览器中搜索“麦田怪圈是怎么回事”\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"打开第一个搜索结果\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"浏览网页内容\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"根据内容回答“麦田怪圈是怎么回事”\"}\n]\n```\n\n另一个例子，我的任务是“在笔记本中写一段关于人工智能的简介”，此任务的拆解步骤是：\n```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"打开笔记本\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"在笔记本中写一段关于人工智能的简介\"}\n]\n```\n\n\n现在，您的当前任务是 \"请写一个FastAPI的Hello World程序\"，请根据现有屏幕图像的状态给出任务的拆解步骤。",
+    "actions": [
+        {
+            "action_type": "PlanAction",
+            "element": "确认FastAPI包已安装"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "导入FastAPI和uvicorn库"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "创建FastAPI实例"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "定义路由装饰器及视图函数返回'Hello World'"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "指定应用运行的主机和端口"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "运行uvicorn服务器以启动应用"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "测试应用已正确返回'Hello World'信息"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "保存文件"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "执行保存的FastAPI应用程序"
+        }
+    ],
+    "LLM_response_editer_en": "I cannot view images directly. However, assuming that the image depicts a computer screen with a code editor open (since you've mentioned Visual Studio Code) and a file named \"fastapi_test.py\" ready to be edited, here is a JSON-format plan to write a \"Hello World\" program using FastAPI:\n\n```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Confirm that the FastAPI package is installed\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Import FastAPI and uvicorn library\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Create FastAPI instance\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Define the route decorator and view function to return 'Hello World'\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Specify the host and port where the application runs\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Run the uvicorn server to start the application\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"The test application has correctly returned 'Hello World' information\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Save File\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Execute the saved FastAPI application\"}\n]\n```",
+    "LLM_response_editer_zh": "我无法直接查看图像。然而，假设该图像描述了一个计算机屏幕，其中打开了代码编辑器（因为您提到了Visual Studio代码），并有一个名为“fastapi_test.py”的文件可以编辑，下面是一个JSON格式计划，用于使用fastapi编写“Hello World”程序：```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"确认FastAPI包已安装\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"导入FastAPI和uvicorn库\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"创建FastAPI实例\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"定义路由装饰器及视图函数返回'Hello World'\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"指定应用运行的主机和端口\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"运行uvicorn服务器以启动应用\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"测试应用已正确返回'Hello World'信息\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"保存文件\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"执行保存的FastAPI应用程序\"}\n]\n```"
+}

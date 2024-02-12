@@ -1,0 +1,17 @@
+{
+    "task_prompt": "Search Baidu Baike for an introduction to RNN (Recurrent Neural Network)",
+    "send_prompt": "You're very familiar with the Windows operating system and UI operations.\nYour current goal is to act as a reward model to judge whether or not this image meets the goal, video width: 1024, video height: 768, the overall mission is: \"Search Baidu Baike for an introduction to RNN (Recurrent Neural Network)\".\n\nWe have developed an implementation plan for this overall mission:\n\n    1. Input 'RNN (Recurrent Neural Network)'\n\n    2. Select the appropriate result and click\n\n    3. Browse the current page\n\n\nNow the current subtask is: \"Browse the current page\".\nPlease describe whether or not this image meets the current subtask, please answer json format:\nHere are a few options, if you think the current subtask is done well, then output this:\n```json  {\"action_type\":\"EvaluateSubTaskAction\", \"situation\": \"sub_task_success\"} ```\nThe mission will go on.\n\nIf you think the current subtask is not done well, need to retry, then output this:\n```json  {\"action_type\":\"EvaluateSubTaskAction\", \"situation\": \"need_retry\", \"advice\": \"I don't think you're clicking in the right place.\"} ```\nYou can give some suggestions for implementation improvements in the \"advice\" field.\n\nIf you feel that the whole plan does not match the current situation and you need to reformulate the implementation plan, please output:\n```json {\"action_type\":\"EvaluateSubTaskAction\", \"situation\": \"need_reformulate\", \"advice\": \"I think the current plan is not suitable for the current situation, because the system does not have .... installed\"} ```\nYou can give some suggestions for reformulating the plan in the \"advice\" field.\n\nPlease surround the json output with the symbols \"```json\" and \"```\".\nThe current goal is: \"Search Baidu Baike for an introduction to RNN (Recurrent Neural Network)\", please describe whether or not this image meets the goal in json format? And whether or not our mission can continue.",
+    "status": "evaluating",
+    "LLM_response": "```json\n{\"action_type\":\"EvaluateSubTaskAction\", \"situation\": \"sub_task_success\"}\n```",
+    "LLM_response_editer": "```json\n{\"action_type\":\"EvaluateSubTaskAction\", \"situation\": \"sub_task_success\"}\n```",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2024-01-13_16-19-46-302596.jpg",
+    "current_task": "Browse the current page",
+    "actions": [
+        {
+            "action_type": "EvaluateSubTaskAction",
+            "situation": "sub_task_success"
+        }
+    ]
+}

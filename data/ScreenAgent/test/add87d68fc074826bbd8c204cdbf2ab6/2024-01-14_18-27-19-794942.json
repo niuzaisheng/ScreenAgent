@@ -1,0 +1,29 @@
+{
+    "task_prompt": "Check reviews of the movie \"Farewell My Concubine\" on a movie review website",
+    "send_prompt": "You are familiar with the Windows operating system.\nYou can see a computer screen with height: 768, width: 1024, and the current task is \"Check reviews of the movie \"Farewell My Concubine\" on a movie review website\", you need to give a plan to accomplish this goal.\nPlease output your plan in json format, e.g. my task is to search the web for \"What's the deal with the Wheat Field Circle?\", the steps to disassemble this task are:\n```json \n[\n    {\"action_type\":\"PlanAction\",\"element\":\"Open web browser.\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Search in your browser for \\\"What's the deal with the Wheat Field Circle?\\\"\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Open the first search result\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Browse the content of the page\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Answer the question \\\"What's the deal with the Wheat Field Circle?\\\" according to the content.\"}\n]\n```\n\nAnother example, my task is \"Write a brief paragraph about artificial intelligence in a notebook\", the steps to disassemble this task are:\n``json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Open Notebook\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Write a brief paragraph about AI in the notebook\"}\n]\n```\n\nNow, your current task is \"Check reviews of the movie \"Farewell My Concubine\" on a movie review website\", give the disassembly steps of the task based on the state of the existing screen image.",
+    "status": "planning",
+    "LLM_response": "```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Double-click on Microsoft Edge or another web browser icon to open it.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"When the web browser is open, click on the address bar at the top.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Type the name of a movie review website or search for \\\"Farewell My Concubine movie reviews\\\" using a search engine.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Press Enter to navigate to the chosen movie review website or the search engine results.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"If using a search engine, click on a relevant link to a review of \\\"Farewell My Concubine.\\\"\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Browse through the reviews to gather information about the movie.\"}\n]\n```",
+    "LLM_response_editer": "```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Double-click on Microsoft Edge to open it.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Search for \\\"Farewell My Concubine movie reviews\\\" using a search engine.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \" Click on a relevant link to a review of \\\"Farewell My Concubine.\\\"\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Browse through the reviews to gather information about the movie.\"}\n]\n```",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2024-01-14_18-27-19-794942.jpg",
+    "current_task": "Double-click on Microsoft Edge to open it.",
+    "actions": [
+        {
+            "action_type": "PlanAction",
+            "element": "Double-click on Microsoft Edge to open it."
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "Search for \"Farewell My Concubine movie reviews\" using a search engine."
+        },
+        {
+            "action_type": "PlanAction",
+            "element": " Click on a relevant link to a review of \"Farewell My Concubine.\""
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "Browse through the reviews to gather information about the movie."
+        }
+    ]
+}

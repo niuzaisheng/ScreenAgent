@@ -1,0 +1,42 @@
+{
+    "task_prompt": "Search online for the latest developments in autonomous driving",
+    "send_prompt": "You're very familiar with the Windows operating system. Now you need to use the Windows operating system to complete a mission.\nYour goal now is to manipulate a computer screen, video width: 1024, video height: 768, the overall mission is: \"Search online for the latest developments in autonomous driving\".\n\nWe have developed an implementation plan for this overall mission:\n\n    1. Double-click on the Firefox Web Browser icon to open it.\n\n    2. Type Bing in a search engine address\n\n    3. Type 'latest developments in autonomous driving' into the search bar.\n\n    4. Browse through the search results looking for reliable and up-to-date sources.\n\n    5. Click on a search result to read more about the latest developments in autonomous driving.\n\n    6. Read the article or the content presented to gather information.\n\n\nThe current subtask is \"Type 'latest developments in autonomous driving' into the search bar.\".\nYou can use the mouse and keyboard, the optional actions are:\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"double_click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"scroll_up\",\"scroll_repeat\":int},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"scroll_down\",\"scroll_repeat\":int},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"move\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"drag\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"KeyName in keysymdef\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Ctrl+A\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"text\",\"keyboard_text\": \"Hello, world!\"},\n    {\"action_type\":\"WaitAction\",\"wait_time\":float}\n]\n```\nWhere the mouse position is relative to the top-left corner of the screen, and the keyboard keys are described in [keysymdef.h].\n\nPlease make output execution actions, please format them in json, e.g. \nMy plan is to click the Windows button, it's on the left bottom corner, so my action will be:\n```json \n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":10,\"height\":760}}\n]\n```\n\nAnother example: \nMy plan is to open the notepad, so my action will be:\n```json\n[\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Super_L\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_text\":\"notepad\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Return\"}\n]\n```\n\n\nThe current subtask is \"Type 'latest developments in autonomous driving' into the search bar.\", please give the detailed next actions based on the state of the existing screen image.",
+    "status": "acting",
+    "LLM_response": "Based on the current subtask, \"Type 'latest developments in autonomous driving' into the search bar,\" and the state of the existing screen image, you should move the mouse cursor to the search bar, click to focus on it and then type the required search query. Assuming an approximate position for the search bar, the actions could be as follows:\n\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":500,\"height\":150}},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"text\",\"keyboard_text\":\"latest developments in autonomous driving\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Return\"}\n]\n```\n\nThis JSON array first performs a left-click action to focus on the search bar, then uses a keyboard action to type the search term, and finally presses the Return (Enter) key to start the search. Please note that the mouse position values are approximate and should be adjusted according to the actual position of the search bar on your screen.",
+    "LLM_response_editer": "Based on the current subtask, \"Type 'latest developments in autonomous driving' into the search bar,\" and the state of the existing screen image, you should move the mouse cursor to the search bar, click to focus on it and then type the required search query,the actions could be as follows:\n\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":500,\"height\":250}},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"text\",\"keyboard_text\":\"latest developments in autonomous driving\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Return\"}\n]\n```",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2024-01-13_17-09-24-296584.jpg",
+    "current_task": "Type 'latest developments in autonomous driving' into the search bar.",
+    "actions": [
+        {
+            "action_type": "MouseAction",
+            "mouse_action_type": "click",
+            "mouse_button": "left",
+            "mouse_position": {
+                "width": 500,
+                "height": 250
+            },
+            "clickable_area": {
+                "upper_left_position": {
+                    "width": 263,
+                    "height": 231
+                },
+                "lower_right_position": {
+                    "width": 697,
+                    "height": 270
+                }
+            }
+        },
+        {
+            "action_type": "KeyboardAction",
+            "keyboard_action_type": "text",
+            "keyboard_text": "latest developments in autonomous driving"
+        },
+        {
+            "action_type": "KeyboardAction",
+            "keyboard_action_type": "press",
+            "keyboard_key": "Return"
+        }
+    ]
+}

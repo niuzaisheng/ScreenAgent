@@ -1,0 +1,42 @@
+{
+    "task_prompt": "请帮我在维基百科上搜索关于CNN(Convolutional Neural Network)的简介",
+    "send_prompt": "您对 Linux 操作系统非常熟悉。您的任务是操作计算机屏幕，给出完成任务的计划。\n您能看到一个计算机屏幕，高度：768，宽度：1024，当前任务为\"请帮我在维基百科上搜索关于CNN(Convolutional Neural Network)的简介\"，您需要给出完成该目标的计划。\n请以 json 格式输出您的计划，例如，我的任务是在网络上搜索“麦田怪圈是怎么回事”，此任务的拆解步骤是：\n```json \n[\n    {\"action_type\":\"PlanAction\",\"element\":\"打开浏览器\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"在浏览器中搜索“麦田怪圈是怎么回事”\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"打开第一个搜索结果\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"浏览网页内容\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"根据内容回答“麦田怪圈是怎么回事”\"}\n]\n```\n\n另一个例子，我的任务是“在笔记本中写一段关于人工智能的简介”，此任务的拆解步骤是：\n```json\n[\n    {\"action_type\":\"PlanAction\",\"element\":\"打开笔记本\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"在笔记本中写一段关于人工智能的简介\"}\n]\n```\n\n\n现在，您的当前任务是 \"请帮我在维基百科上搜索关于CNN(Convolutional Neural Network)的简介\"，请根据现有屏幕图像的状态给出任务的拆解步骤。",
+    "LLM_response": "Given the current state on the computer screen, the user is already on the Wikipedia page, but not on the specific page for Convolutional Neural Network (CNN). The plan should include navigating to the CNN page on Wikipedia. Here is the plan broken down into steps in JSON format:\n\n```json\n[\n    {\"action_type\":\"PlanAction\",\"element\":\"Locate the Wikipedia search bar\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Click on the search bar\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Type 'Convolutional Neural Network'\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Press 'Enter' to initiate search\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Click on the search result for Convolutional Neural Network\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Read and understand the introduction of CNN on its Wikipedia page\"}\n]\n```\n\nThe steps assume the ability to navigate and interact with the Wikipedia website interface to reach and read the desired content.",
+    "LLM_response_editer": "Given the current state on the computer screen, the user is already on the Wikipedia page, but not on the specific page for Convolutional Neural Network (CNN). The plan should include navigating to the CNN page on Wikipedia. Here is the plan broken down into steps in JSON format:\n\n```json\n[\n    {\"action_type\":\"PlanAction\",\"element\":\"Locate the Wikipedia search bar\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Click on the search bar\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Type 'Convolutional Neural Network'\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Press 'Enter' to initiate search\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Click on the search result for Convolutional Neural Network\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Read and understand the introduction of CNN on its Wikipedia page\"}\n]\n```\n\nThe steps assume the ability to navigate and interact with the Wikipedia website interface to reach and read the desired content.",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2023-12-22_16-06-02-437658.jpg",
+    "session_id": "c948b7b7723047e0bc67823f732942db",
+    "task_prompt_en": "Please help me search Wikipedia for an introduction to CNN (Convolutional Neural Network)",
+    "task_prompt_zh": "请帮我在维基百科上搜索关于CNN(Convolutional Neural Network)的简介",
+    "send_prompt_en": "You are familiar with the Linux operating system. Your task is to operate the computer screen and give a plan to complete the task.\nYou can see a computer screen with a height of 768 and a width of 1024. The current task is \"Please help me search for an introduction to CNN (Revolutionary Neural Network) on Wikipedia\". You need to give a plan to complete this goal.\nPlease output your plan in json format. For example, my task is to search the Internet for \"What's wrong with crop circles?\" The disassembly steps of this task are:```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Open Browser\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Search the browser for \\\"What's wrong with crop circles?\\\"\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Open the first search result\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Browse web content\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Answer \\\"What's wrong with crop circles\\\" according to the content\"}\n]\n```Another example, my task is to \"write a brief introduction to AI in my notebook\". The disassembly steps of this task are:```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Open Notebook\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Write a brief introduction to AI in your notebook\"}\n]\n```Now, your current task is \"Please help me search for an introduction to CNN (Convolutional Neural Network) on Wikipedia\". Please give the disassembly steps of the task according to the status of the existing screen images.",
+    "send_prompt_zh": "您对 Linux 操作系统非常熟悉。您的任务是操作计算机屏幕，给出完成任务的计划。\n您能看到一个计算机屏幕，高度：768，宽度：1024，当前任务为\"请帮我在维基百科上搜索关于CNN(Convolutional Neural Network)的简介\"，您需要给出完成该目标的计划。\n请以 json 格式输出您的计划，例如，我的任务是在网络上搜索“麦田怪圈是怎么回事”，此任务的拆解步骤是：\n```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"打开浏览器\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"在浏览器中搜索“麦田怪圈是怎么回事”\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"打开第一个搜索结果\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"浏览网页内容\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"根据内容回答“麦田怪圈是怎么回事”\"}\n]\n```\n\n另一个例子，我的任务是“在笔记本中写一段关于人工智能的简介”，此任务的拆解步骤是：\n```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"打开笔记本\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"在笔记本中写一段关于人工智能的简介\"}\n]\n```\n\n\n现在，您的当前任务是 \"请帮我在维基百科上搜索关于CNN(Convolutional Neural Network)的简介\"，请根据现有屏幕图像的状态给出任务的拆解步骤。",
+    "actions": [
+        {
+            "action_type": "PlanAction",
+            "element": "Locate the Wikipedia search bar"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "Click on the search bar"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "Type 'Convolutional Neural Network'"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "Press 'Enter' to initiate search"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "Click on the search result for Convolutional Neural Network"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "Read and understand the introduction of CNN on its Wikipedia page"
+        }
+    ],
+    "LLM_response_editer_en": "Given the current state on the computer screen, the user is already on the Wikipedia page, but not on the specific page for Convolutional Neural Network (CNN). The plan should include navigating to the CNN page on Wikipedia. Here is the plan broken down into steps in JSON format:\n\n```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Locate the Wikipedia search bar\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Click on the search bar\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Type 'Convolutional Neural Network'\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Press 'Enter' to initiate search\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Click on the search result for Convolutional Neural Network\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Read and understand the introduction of CNN on its Wikipedia page\"}\n]\n```\n\nThe steps assume the ability to navigate and interact with the Wikipedia website interface to reach and read the desired content.",
+    "LLM_response_editer_zh": "给定计算机屏幕上的当前状态，用户已经在维基百科页面上，但不是在卷积神经网络（CNN）的特定页面上。该计划应包括导航到维基百科上的CNN页面。以下是JSON格式的计划，分为多个步骤：```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"找到维基百科搜索栏\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"单击搜索栏\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"类型“卷积神经网络”\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"按“Enter”启动搜索\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"单击卷积神经网络的搜索结果\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"阅读并理解CNN在维基百科页面上的介绍\"}\n]\n```这些步骤假设能够导航维基百科网站界面并与之交互，以访问和阅读所需的内容。"
+}

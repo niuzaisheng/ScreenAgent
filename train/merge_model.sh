@@ -7,7 +7,7 @@ export LOCAL_WORLD_SIZE=4
 function run_cmd() { 
     python merge_model.py \
         --version chat \
-        --from-pretrained ./checkpoints/cogagent-chat-finetune_cogagent_translated-01-18-00-14 \
+        --from-pretrained ./checkpoints/cogagent-chat-ScreenAgent-<timestamp> \
         --bf16 \
         --rank $1
 }

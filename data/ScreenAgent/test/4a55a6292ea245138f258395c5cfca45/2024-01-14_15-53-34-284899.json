@@ -1,0 +1,32 @@
+{
+    "task_prompt": "Change paper size to B4",
+    "send_prompt": "You're very familiar with the Windows operating system. Now you need to use the Windows operating system to complete a mission.\nYour goal now is to manipulate a computer screen, video width: 1024, video height: 768, the overall mission is: \"Change paper size to B4\".\n\nWe have developed an implementation plan for this overall mission:\n\n    1. Click on the 'Layout' tab in Microsoft Word.\n\n    2. In the 'Page Setup' group, click on the 'Size' button.\n\n    3. Click on the 'B4 (JIS)' option to change the paper size to B4.\n\n\nThe current subtask is \"Click on the 'Layout' tab in Microsoft Word.\".\nYou can use the mouse and keyboard, the optional actions are:\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"double_click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"scroll_up\",\"scroll_repeat\":int},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"scroll_down\",\"scroll_repeat\":int},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"move\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"drag\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"KeyName in keysymdef\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Ctrl+A\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"text\",\"keyboard_text\": \"Hello, world!\"},\n    {\"action_type\":\"WaitAction\",\"wait_time\":float}\n]\n```\nWhere the mouse position is relative to the top-left corner of the screen, and the keyboard keys are described in [keysymdef.h].\n\nPlease make output execution actions, please format them in json, e.g. \nMy plan is to click the Windows button, it's on the left bottom corner, so my action will be:\n```json \n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":10,\"height\":760}}\n]\n```\n\nAnother example: \nMy plan is to open the notepad, so my action will be:\n```json\n[\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Super_L\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_text\":\"notepad\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Return\"}\n]\n```\n\n\nThe current subtask is \"Click on the 'Layout' tab in Microsoft Word.\", please give the detailed next actions based on the state of the existing screen image.",
+    "status": "acting",
+    "LLM_response": "To complete the current subtask of clicking on the 'Layout' tab in Microsoft Word, based on the given screen resolution and the position of the tabs, I would execute a mouse action to move the cursor to the approximate position of the 'Layout' tab and then click it. Here's the JSON representation of the required action:\n\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":600,\"height\":45}}\n]\n``` \n\nPlease adjust the width value within the mouse_position object if the 'Layout' tab appears at a different location on your screen. The height value is an estimate based on the typical position of tabs in the Microsoft Word ribbon interface.",
+    "LLM_response_editer": "To complete the current subtask of clicking on the 'Layout' tab in Microsoft Word, based on the given screen resolution and the position of the tabs, I would execute a mouse action to move the cursor to the approximate position of the 'Layout' tab and then click it. Here's the JSON representation of the required action:\n\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":236,\"height\":45}}\n]\n```",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2024-01-14_15-53-34-284899.jpg",
+    "current_task": "Click on the 'Layout' tab in Microsoft Word.",
+    "actions": [
+        {
+            "action_type": "MouseAction",
+            "mouse_action_type": "click",
+            "mouse_button": "left",
+            "mouse_position": {
+                "width": 236,
+                "height": 45
+            },
+            "clickable_area": {
+                "upper_left_position": {
+                    "width": 232,
+                    "height": 39
+                },
+                "lower_right_position": {
+                    "width": 258,
+                    "height": 57
+                }
+            }
+        }
+    ]
+}

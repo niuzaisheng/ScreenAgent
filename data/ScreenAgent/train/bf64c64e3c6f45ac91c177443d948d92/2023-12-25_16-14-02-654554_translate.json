@@ -1,0 +1,71 @@
+{
+    "task_prompt": "使用GIMP缩放图片",
+    "send_prompt": "您对 Linux 操作系统非常熟悉。您的任务是操作计算机屏幕，完成指定的任务。\n您现在的目标是操作计算机屏幕，视频宽度：1024，视频高度：768，总体目标是 \"使用GIMP缩放图片\"。\n\n我们为这个总体目标制定了一个实施计划：\n\n    1. 选择图片选项\n\n    2. 选择缩放图片\n\n    3. 输入参数并查看结果\n\n\n现在的子任务是 \"输入参数并查看结果\"。\n您可以使用鼠标和键盘，可选择的操作有：\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"double_click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"scroll_up\",\"scroll_repeat\":int},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"scroll_down\",\"scroll_repeat\":int},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"move\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"drag\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"KeyName in keysymdef\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Ctrl+A\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"text\",\"keyboard_text\": \"Hello, world!\"},\n    {\"action_type\":\"WaitAction\",\"wait_time\":float}\n]\n```\n其中，鼠标的位置是相对于屏幕左上角的坐标，键盘的按键请参考 [keysymdef.h]。\n\n请输出执行动作，请以 json 格式输出您的动作，例如：\n我的计划是点击左下角的开始按钮，因此我的操作将是：\n```json \n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":10,\"height\":760}}\n]\n```\n\n另一个例子，我的计划是打开记事本，我看到屏幕上有Mousepad，因此我的操作将是：\n```json\n[\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Super_L\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_text\":\"notepad\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Return\"}\n]\n```\n\n\n现在的子任务是 \"输入参数并查看结果\"，请根据现有屏幕图像的状态给出详细的下一步操作。",
+    "LLM_response": "在当前的屏幕上，我们可以看到一个缩放图片的窗口，其中包含一个红色的苹果图片。为了缩放这个图片，我们需要输入参数并查看结果。\n\n我们的计划是使用GIMP缩放图片，因此我们需要选择缩放图片并输入参数。我们可以使用鼠标和键盘进行操作。\n\n首先，我们需要选择缩放图片。我们可以使用鼠标在窗口中拖动，以选择需要缩放的图片。\n\n接下来，我们需要输入参数并查看结果。我们可以使用键盘输入参数，例如，我们可以使用快捷键 \"Ctrl+A\" 选择整个图片，然后使用快捷键 \"Ctrl+T\" 进行缩放操作。我们可以使用鼠标拖动缩放手柄来调整图片的大小。\n\n最后，我们可以使用鼠标在缩放手柄上拖动，以查看结果。我们可以使用键盘按下 \"Enter\" 键来应用缩放操作并保存结果。\n\n因此，我们的下一步操作如下：\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":10,\"height\":760}},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Ctrl+A\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Ctrl+T\"},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"drag\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":10,\"height\":760}}\n]\n```",
+    "LLM_response_editer": "在当前的屏幕上，我们可以看到一个缩放图片的窗口，其中包含一个红色的苹果图片。为了缩放这个图片，我们需要输入参数并查看结果。\n因此，我们的下一步操作如下：\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":515,\"height\":348}},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Ctrl+A\"},\n    {\"action_type\": \"KeyboardAction\", \"keyboard_text\": \"600\", \"keyboard_action_type\": \"text\", \"keyboard_key\": null},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":521,\"height\":370}},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Ctrl+A\"},\n    {\"action_type\": \"KeyboardAction\", \"keyboard_text\": \"600\", \"keyboard_action_type\": \"text\", \"keyboard_key\": null},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":663,\"height\":564}}\n]\n```",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2023-12-25_16-14-02-654554.jpg",
+    "session_id": "bf64c64e3c6f45ac91c177443d948d92",
+    "task_prompt_en": "Scale pictures using GIMP",
+    "task_prompt_zh": "使用GIMP缩放图片",
+    "send_prompt_en": "You are familiar with the Linux operating system. Your task is to operate the computer screen and complete the specified task.\nYour current goal is to operate the computer screen. The video width is 1024 and the video height is 768. The overall goal is to \"use GIMP to scale pictures\".\nWe have formulated an implementation plan for this overall goal:\n1. Select a picture option\n2. Select zoom picture\n3. Enter parameters and view results\nThe current subtask is \"Enter parameters and view results\".\nYou can use the mouse and keyboard. The operations you can select are:```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"double_click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"scroll_up\",\"scroll_repeat\":int},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"scroll_down\",\"scroll_repeat\":int},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"move\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"drag\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"KeyName in keysymdef\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Ctrl+A\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"text\",\"keyboard_text\": \"Hello, world!\"},\n    {\"action_type\":\"WaitAction\",\"wait_time\":float}\n]\n```The position of the mouse is the coordinate relative to the upper left corner of the screen. For keyboard keys, see [keysymdef. h].\nPlease output the execution action. Please output your action in json format, for example:\nMy plan is to click the Start button at the bottom left corner, so my operation will be:```json\n[\n    {\"action_type\": \"MouseAction\", \"mouse_action_type\": \"click\", \"mouse_button\": \"left\", \"mouse_position\": {\"width\": 10, \"height\": 760}}\n]\n```Another example, my plan is to open notepad. I see Mousepad on the screen, so my operation will be:```json\n[\n    {\"action_type\": \"KeyboardAction\", \"keyboard_action_type\": \"press\", \"keyboard_key\": \"Super_L\"},\n    {\"action_type\": \"KeyboardAction\", \"keyboard_action_type\": \"text\", \"keyboard_text\": \"notepad\"},\n    {\"action_type\": \"KeyboardAction\", \"keyboard_action_type\": \"press\", \"keyboard_key\": \"Return\"}\n]\n```The current subtask is \"Input parameters and view results\". Please give detailed next steps according to the status of existing screen images.",
+    "send_prompt_zh": "您对 Linux 操作系统非常熟悉。您的任务是操作计算机屏幕，完成指定的任务。\n您现在的目标是操作计算机屏幕，视频宽度：1024，视频高度：768，总体目标是 \"使用GIMP缩放图片\"。\n\n我们为这个总体目标制定了一个实施计划：\n\n    1. 选择图片选项\n\n    2. 选择缩放图片\n\n    3. 输入参数并查看结果\n\n\n现在的子任务是 \"输入参数并查看结果\"。\n您可以使用鼠标和键盘，可选择的操作有：\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"double_click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"scroll_up\",\"scroll_repeat\":int},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"scroll_down\",\"scroll_repeat\":int},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"move\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"drag\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"KeyName in keysymdef\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Ctrl+A\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"text\",\"keyboard_text\": \"Hello, world!\"},\n    {\"action_type\":\"WaitAction\",\"wait_time\":float}\n]\n```\n其中，鼠标的位置是相对于屏幕左上角的坐标，键盘的按键请参考 [keysymdef.h]。\n\n请输出执行动作，请以 json 格式输出您的动作，例如：\n我的计划是点击左下角的开始按钮，因此我的操作将是：\n```json\n[\n    {\"action_type\": \"MouseAction\", \"mouse_action_type\": \"click\", \"mouse_button\": \"left\", \"mouse_position\": {\"width\": 10, \"height\": 760}}\n]\n```\n\n另一个例子，我的计划是打开记事本，我看到屏幕上有Mousepad，因此我的操作将是：\n```json\n[\n    {\"action_type\": \"KeyboardAction\", \"keyboard_action_type\": \"press\", \"keyboard_key\": \"Super_L\"},\n    {\"action_type\": \"KeyboardAction\", \"keyboard_action_type\": \"text\", \"keyboard_text\": \"notepad\"},\n    {\"action_type\": \"KeyboardAction\", \"keyboard_action_type\": \"press\", \"keyboard_key\": \"Return\"}\n]\n```\n\n\n现在的子任务是 \"输入参数并查看结果\"，请根据现有屏幕图像的状态给出详细的下一步操作。",
+    "actions": [
+        {
+            "action_type": "MouseAction",
+            "mouse_action_type": "click",
+            "mouse_button": "left",
+            "mouse_position": {
+                "width": 515,
+                "height": 348
+            }
+        },
+        {
+            "action_type": "KeyboardAction",
+            "keyboard_action_type": "press",
+            "keyboard_key": [
+                "Control_L",
+                "a"
+            ]
+        },
+        {
+            "action_type": "KeyboardAction",
+            "keyboard_action_type": "text",
+            "keyboard_text": "600"
+        },
+        {
+            "action_type": "MouseAction",
+            "mouse_action_type": "click",
+            "mouse_button": "left",
+            "mouse_position": {
+                "width": 521,
+                "height": 370
+            }
+        },
+        {
+            "action_type": "KeyboardAction",
+            "keyboard_action_type": "press",
+            "keyboard_key": [
+                "Control_L",
+                "a"
+            ]
+        },
+        {
+            "action_type": "KeyboardAction",
+            "keyboard_action_type": "text",
+            "keyboard_text": "600"
+        },
+        {
+            "action_type": "MouseAction",
+            "mouse_action_type": "click",
+            "mouse_button": "left",
+            "mouse_position": {
+                "width": 663,
+                "height": 564
+            }
+        }
+    ],
+    "LLM_response_editer_en": "On the current screen, we can see a window of zooming image, which contains a red apple image. To scale the image, we need to enter parameters and view the results.\nTherefore, our next steps are as follows:```json\n[\n    {\"action_type\": \"MouseAction\", \"mouse_action_type\": \"click\", \"mouse_button\": \"left\", \"mouse_position\": {\"width\": 515, \"height\": 348}},\n    {\"action_type\": \"KeyboardAction\", \"keyboard_action_type\": \"press\", \"keyboard_key\": \"Control_L+a\"},\n    {\"action_type\": \"KeyboardAction\", \"keyboard_action_type\": \"text\", \"keyboard_text\": \"600\"},\n    {\"action_type\": \"MouseAction\", \"mouse_action_type\": \"click\", \"mouse_button\": \"left\", \"mouse_position\": {\"width\": 521, \"height\": 370}},\n    {\"action_type\": \"KeyboardAction\", \"keyboard_action_type\": \"press\", \"keyboard_key\": \"Control_L+a\"},\n    {\"action_type\": \"KeyboardAction\", \"keyboard_action_type\": \"text\", \"keyboard_text\": \"600\"},\n    {\"action_type\": \"MouseAction\", \"mouse_action_type\": \"click\", \"mouse_button\": \"left\", \"mouse_position\": {\"width\": 663, \"height\": 564}}\n]\n```",
+    "LLM_response_editer_zh": "在当前的屏幕上，我们可以看到一个缩放图片的窗口，其中包含一个红色的苹果图片。为了缩放这个图片，我们需要输入参数并查看结果。\n因此，我们的下一步操作如下：\n```json\n[\n    {\"action_type\": \"MouseAction\", \"mouse_action_type\": \"click\", \"mouse_button\": \"left\", \"mouse_position\": {\"width\": 515, \"height\": 348}},\n    {\"action_type\": \"KeyboardAction\", \"keyboard_action_type\": \"press\", \"keyboard_key\": \"Control_L+a\"},\n    {\"action_type\": \"KeyboardAction\", \"keyboard_action_type\": \"text\", \"keyboard_text\": \"600\"},\n    {\"action_type\": \"MouseAction\", \"mouse_action_type\": \"click\", \"mouse_button\": \"left\", \"mouse_position\": {\"width\": 521, \"height\": 370}},\n    {\"action_type\": \"KeyboardAction\", \"keyboard_action_type\": \"press\", \"keyboard_key\": \"Control_L+a\"},\n    {\"action_type\": \"KeyboardAction\", \"keyboard_action_type\": \"text\", \"keyboard_text\": \"600\"},\n    {\"action_type\": \"MouseAction\", \"mouse_action_type\": \"click\", \"mouse_button\": \"left\", \"mouse_position\": {\"width\": 663, \"height\": 564}}\n]\n```"
+}

@@ -1,0 +1,37 @@
+{
+    "task_prompt": "输入一段关于LLM的英文介绍，并改变文字字体为Liberation mono",
+    "send_prompt": "您对 Linux 操作系统非常熟悉。您的任务是操作计算机屏幕，给出完成任务的计划。\n您能看到一个计算机屏幕，高度：768，宽度：1024，当前任务为\"输入一段关于LLM的英文介绍，并改变文字字体为Liberation mono\"，您需要给出完成该目标的计划。\n请以 json 格式输出您的计划，例如，我的任务是在网络上搜索“麦田怪圈是怎么回事”，此任务的拆解步骤是：\n```json \n[\n    {\"action_type\":\"PlanAction\",\"element\":\"打开浏览器\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"在浏览器中搜索“麦田怪圈是怎么回事”\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"打开第一个搜索结果\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"浏览网页内容\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"根据内容回答“麦田怪圈是怎么回事”\"}\n]\n```\n\n另一个例子，我的任务是“在笔记本中写一段关于人工智能的简介”，此任务的拆解步骤是：\n```json\n[\n    {\"action_type\":\"PlanAction\",\"element\":\"打开笔记本\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"在笔记本中写一段关于人工智能的简介\"}\n]\n```\n\n\n现在，您的当前任务是 \"输入一段关于LLM的英文介绍，并改变文字字体为Liberation mono\"，请根据现有屏幕图像的状态给出任务的拆解步骤。",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2024-01-03_15-22-14-512405.jpg",
+    "current_task": "定位文档编辑器窗口",
+    "session_id": "task106",
+    "task_prompt_en": "Enter an English introduction to LLM, and change the font to Liberation mono",
+    "task_prompt_zh": "输入一段关于LLM的英文介绍，并改变文字字体为Liberation mono",
+    "send_prompt_en": "You are familiar with the Linux operating system. Your task is to operate the computer screen and give a plan to complete the task.\nYou can see a computer screen with a height of 768 and a width of 1024. The current task is to \"input an English introduction about LLM and change the text font to Liberation mono\". You need to give a plan to complete this goal.\nPlease output your plan in json format. For example, my task is to search the Internet for \"What's wrong with crop circles?\" The disassembly steps of this task are:```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Open Browser\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Search the browser for \\\"What's wrong with crop circles?\\\"\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Open the first search result\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Browse web content\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Answer \\\"What's wrong with crop circles\\\" according to the content\"}\n]\n```Another example, my task is to \"write a brief introduction to AI in my notebook\". The disassembly steps of this task are:```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Open Notebook\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Write a brief introduction to AI in your notebook\"}\n]\n```Now, your current task is to \"input an English introduction about LLM and change the text font to Liberation mono\". Please give the disassembly steps of the task according to the status of the existing screen image.",
+    "send_prompt_zh": "您对 Linux 操作系统非常熟悉。您的任务是操作计算机屏幕，给出完成任务的计划。\n您能看到一个计算机屏幕，高度：768，宽度：1024，当前任务为\"输入一段关于LLM的英文介绍，并改变文字字体为Liberation mono\"，您需要给出完成该目标的计划。\n请以 json 格式输出您的计划，例如，我的任务是在网络上搜索“麦田怪圈是怎么回事”，此任务的拆解步骤是：\n```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"打开浏览器\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"在浏览器中搜索“麦田怪圈是怎么回事”\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"打开第一个搜索结果\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"浏览网页内容\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"根据内容回答“麦田怪圈是怎么回事”\"}\n]\n```\n\n另一个例子，我的任务是“在笔记本中写一段关于人工智能的简介”，此任务的拆解步骤是：\n```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"打开笔记本\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"在笔记本中写一段关于人工智能的简介\"}\n]\n```\n\n\n现在，您的当前任务是 \"输入一段关于LLM的英文介绍，并改变文字字体为Liberation mono\"，请根据现有屏幕图像的状态给出任务的拆解步骤。",
+    "actions": [
+        {
+            "action_type": "PlanAction",
+            "element": "输入一段关于LLM（大型语言模型）的英文介绍"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "选择刚刚输入的文字"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "点击文档中的当前字体选项下拉菜单"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "在字体列表中选择‘Liberation Mono’字体"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "保存文档"
+        }
+    ],
+    "LLM_response_editer_en": "```json \n[\n\n    {\"action_type\":\"PlanAction\",\"element\":\"Enter an English introduction to LLM (Large Language Model)\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"Select the text just entered\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"Click the current font option drop-down menu in the document\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"Select the 'Liberation Mono' font in the font list\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"Save Document\"}\n\n]\n```",
+    "LLM_response_editer_zh": "```json \n[\n\n    {\"action_type\":\"PlanAction\",\"element\":\"输入一段关于LLM（大型语言模型）的英文介绍\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"选择刚刚输入的文字\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"点击文档中的当前字体选项下拉菜单\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"在字体列表中选择‘Liberation Mono’字体\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"保存文档\"}\n\n]\n```"
+}

@@ -1,0 +1,32 @@
+{
+    "task_prompt": "Insert a 5x6 table",
+    "send_prompt": "You're very familiar with the Windows operating system. Now you need to use the Windows operating system to complete a mission.\nYour goal now is to manipulate a computer screen, video width: 1024, video height: 768, the overall mission is: \"Insert a 5x6 table\".\n\nWe have developed an implementation plan for this overall mission:\n\n    1. Click on the 'Table' menu in the top toolbar.\n\n    2. Select 'Insert 5×6 Table' from the dropdown menu.\n\n\nThe current subtask is \"Select 'Insert 5×6 Table' from the dropdown menu.\".\nYou can use the mouse and keyboard, the optional actions are:\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"double_click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"scroll_up\",\"scroll_repeat\":int},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"scroll_down\",\"scroll_repeat\":int},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"move\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"drag\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"KeyName in keysymdef\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Ctrl+A\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"text\",\"keyboard_text\": \"Hello, world!\"},\n    {\"action_type\":\"WaitAction\",\"wait_time\":float}\n]\n```\nWhere the mouse position is relative to the top-left corner of the screen, and the keyboard keys are described in [keysymdef.h].\n\nPlease make output execution actions, please format them in json, e.g. \nMy plan is to click the Windows button, it's on the left bottom corner, so my action will be:\n```json \n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":10,\"height\":760}}\n]\n```\n\nAnother example: \nMy plan is to open the notepad, so my action will be:\n```json\n[\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Super_L\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_text\":\"notepad\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Return\"}\n]\n```\n\n\nThe current subtask is \"Select 'Insert 5×6 Table' from the dropdown menu.\", please give the detailed next actions based on the state of the existing screen image.",
+    "status": "acting",
+    "LLM_response": "To select \"Insert 5×6 Table\" from the dropdown menu, you would typically move the mouse cursor over the desired table size—5 columns by 6 rows—in the table grid that is shown as part of the dropdown. However, based on the image provided, it appears to be a screenshot of LibreOffice Writer, not a Windows operating system application. LibreOffice Writer's table insertion process is visual, where you select the number of rows and columns by hovering over the grid.\n\nGiven this situation, we would move the mouse cursor over the 5th column and 6th row on the grid to select a 5x6 table. Assuming that the grid starts at the top-left corner of the displayed table dropdown and each cell in the dropdown grid is approximately 15 pixels wide and tall, the mouse position could be approximated. Without the precise location, as I cannot interact with the screen or measure it, I can offer a general action in JSON format:\n\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"move\",\"mouse_position\":{\"width\":approximate_width,\"height\":approximate_height}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":approximate_width,\"height\":approximate_height}}\n]\n```\n\nYou would need to replace `approximate_width` and `approximate_height` with the actual coordinates obtained from the position of the 5th column and 6th",
+    "LLM_response_editer": "To select \"Insert 5×6 Table\" from the drop-down menu, you usually need to move the mouse cursor to the desired table size - 5 columns by 6 rows - on the table grid displayed in the drop-down menu.The table insertion process in LibreOffice Writer is visual, and you can select the number of rows and columns by hovering the mouse over the grid.\nIn this case, I will move the mouse cursor to column 5 and row 6 on the grid and click to select the 5x6 table. the JSON formatting action is as follows:\n\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":687,\"height\":189}}\n]\n```",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2024-01-12_15-24-23-392854.jpg",
+    "current_task": "Select 'Insert 5×6 Table' from the dropdown menu.",
+    "actions": [
+        {
+            "action_type": "MouseAction",
+            "mouse_action_type": "click",
+            "mouse_button": "left",
+            "mouse_position": {
+                "width": 687,
+                "height": 189
+            },
+            "clickable_area": {
+                "upper_left_position": {
+                    "width": 684,
+                    "height": 181
+                },
+                "lower_right_position": {
+                    "width": 698,
+                    "height": 197
+                }
+            }
+        }
+    ]
+}

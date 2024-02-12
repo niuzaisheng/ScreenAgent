@@ -1,0 +1,16 @@
+{
+    "task_prompt": "Watch SpongeBob on Bilibili in an opened browser and drag the progress bar to the middle",
+    "send_prompt": "You're very familiar with the Windows operating system and UI operations.\nYour current goal is to act as a reward model to judge whether or not this image meets the goal, video width: 1024, video height: 768, the overall mission is: \"Watch SpongeBob on Bilibili in an opened browser and drag the progress bar to the middle\".\n\nWe have developed an implementation plan for this overall mission:\n\n    1. Type 'www.bilibili.com' into the address bar.\n\n    2. Press Enter to navigate to Bilibili.\n\n    3. Use the Bilibili search bar to type 'SpongeBob'.\n\n    4. Press enter to view search results\n\n    5. Select a SpongeBob episode from the search results.\n\n    6. Move the mouse to in the middle of the video.\n\n    7. Click the progress bar to the middle of the video.\n\n\nNow the current subtask is: \"Press Enter to navigate to Bilibili.\".\nPlease describe whether or not this image meets the current subtask, please answer json format:\nHere are a few options, if you think the current subtask is done well, then output this:\n```json  {\"action_type\":\"EvaluateSubTaskAction\", \"situation\": \"sub_task_success\"} ```\nThe mission will go on.\n\nIf you think the current subtask is not done well, need to retry, then output this:\n```json  {\"action_type\":\"EvaluateSubTaskAction\", \"situation\": \"need_retry\", \"advice\": \"I don't think you're clicking in the right place.\"} ```\nYou can give some suggestions for implementation improvements in the \"advice\" field.\n\nIf you feel that the whole plan does not match the current situation and you need to reformulate the implementation plan, please output:\n```json {\"action_type\":\"EvaluateSubTaskAction\", \"situation\": \"need_reformulate\", \"advice\": \"I think the current plan is not suitable for the current situation, because the system does not have .... installed\"} ```\nYou can give some suggestions for reformulating the plan in the \"advice\" field.\n\nPlease surround the json output with the symbols \"```json\" and \"```\".\nThe current goal is: \"Watch SpongeBob on Bilibili in an opened browser and drag the progress bar to the middle\", please describe whether or not this image meets the goal in json format? And whether or not our mission can continue.",
+    "status": "evaluating",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2024-01-13_19-01-35-862791.jpg",
+    "current_task": "Use the Bilibili search bar to type 'SpongeBob'.",
+    "actions": [
+        {
+            "action_type": "EvaluateSubTaskAction",
+            "situation": "need_retry",
+            "advice": "You have not finished the subtask."
+        }
+    ]
+}

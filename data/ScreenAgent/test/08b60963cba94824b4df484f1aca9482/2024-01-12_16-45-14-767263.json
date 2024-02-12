@@ -1,0 +1,32 @@
+{
+    "task_prompt": "Find and read the book \"Notre-Dame de Paris\" on Douban Read",
+    "send_prompt": "You're very familiar with the Windows operating system. Now you need to use the Windows operating system to complete a mission.\nYour goal now is to manipulate a computer screen, video width: 1024, video height: 768, the overall mission is: \"Find and read the book \"Notre-Dame de Paris\" on Douban Read\".\n\nWe have developed an implementation plan for this overall mission:\n\n    1. Select option ebooks.\n\n    2. Click Search button.\n\n    3. Type \"Notre-Dame de Paris\" into the search bar.\n\n    4. Click on the book \"Notre-Dame de Paris\" from the search results.\n\n    5. Click the Read button\n\n    6. Read the book \"Notre-Dame de Paris\" on Douban Read.\n\n\nThe current subtask is \"Select option ebooks.\".\nYou can use the mouse and keyboard, the optional actions are:\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"double_click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"scroll_up\",\"scroll_repeat\":int},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"scroll_down\",\"scroll_repeat\":int},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"move\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"drag\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":int,\"height\":int}},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"KeyName in keysymdef\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Ctrl+A\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"text\",\"keyboard_text\": \"Hello, world!\"},\n    {\"action_type\":\"WaitAction\",\"wait_time\":float}\n]\n```\nWhere the mouse position is relative to the top-left corner of the screen, and the keyboard keys are described in [keysymdef.h].\n\nPlease make output execution actions, please format them in json, e.g. \nMy plan is to click the Windows button, it's on the left bottom corner, so my action will be:\n```json \n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":10,\"height\":760}}\n]\n```\n\nAnother example: \nMy plan is to open the notepad, so my action will be:\n```json\n[\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Super_L\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_text\":\"notepad\"},\n    {\"action_type\":\"KeyboardAction\",\"keyboard_action_type\":\"press\",\"keyboard_key\":\"Return\"}\n]\n```\n\n\nThe current subtask is \"Select option ebooks.\", please give the detailed next actions based on the state of the existing screen image.",
+    "status": "acting",
+    "LLM_response": "Based on the current screen image of the Douban Read website, to select the option \"ebooks,\" you need to click on the corresponding section in the navigation menu. In the image provided, there is no explicit \"ebooks\" section visible, but we can assume it might be located in the top navigation menu, or it might require scrolling to appear.\n\nAssuming \"电子书\" (ebooks) is part of the main navigation menu similar to \"首页\" (home), \"图书\" (books), \"影视\" (movies), etc., I would execute a click action on its approximate location on the navigation bar. If the section was off-screen, I would have to scroll, but since I can only act on what's visible in the image, I will provide an action to click on the main navigation menu. \n\nHere is a JSON formatted plan assuming the \"ebooks\" section is next to the \"图书\" (books) section:\n\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":200,\"height\":50}}\n]\n```\n\nThe position {\"width\":200,\"height\":50} is an estimate since the actual position would depend on the layout of the website's menu. The corresponding button would need to be visually identified, and the `mouse_position` would need to be adjusted accordingly.",
+    "LLM_response_editer": "Based on the current screen image of the Douban Read website, to select the option \"ebooks,\" you need to click on the corresponding section in the navigation menu. \n\n```json\n[\n    {\"action_type\":\"MouseAction\",\"mouse_action_type\":\"click\",\"mouse_button\":\"left\",\"mouse_position\":{\"width\":111,\"height\":214}}\n]\n```",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2024-01-12_16-45-14-767263.jpg",
+    "current_task": "Select option ebooks.",
+    "actions": [
+        {
+            "action_type": "MouseAction",
+            "mouse_action_type": "click",
+            "mouse_button": "left",
+            "mouse_position": {
+                "width": 111,
+                "height": 214
+            },
+            "clickable_area": {
+                "upper_left_position": {
+                    "width": 87,
+                    "height": 208
+                },
+                "lower_right_position": {
+                    "width": 145,
+                    "height": 227
+                }
+            }
+        }
+    ]
+}

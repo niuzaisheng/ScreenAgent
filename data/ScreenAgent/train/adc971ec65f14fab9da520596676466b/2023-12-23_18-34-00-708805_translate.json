@@ -1,0 +1,30 @@
+{
+    "task_prompt": "将吉林大学人工智能学院的第一段简介复制到已经打开的文本文档里",
+    "send_prompt": "您对 Linux 操作系统非常熟悉。您的任务是操作计算机屏幕，给出完成任务的计划。\n您能看到一个计算机屏幕，高度：768，宽度：1024，当前任务为\"将吉林大学人工智能学院的第一段简介复制到已经打开的文本文档里\"，您需要给出完成该目标的计划。\n请以 json 格式输出您的计划，例如，我的任务是在网络上搜索“麦田怪圈是怎么回事”，此任务的拆解步骤是：\n```json \n[\n    {\"action_type\":\"PlanAction\",\"element\":\"打开浏览器\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"在浏览器中搜索“麦田怪圈是怎么回事”\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"打开第一个搜索结果\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"浏览网页内容\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"根据内容回答“麦田怪圈是怎么回事”\"}\n]\n```\n\n另一个例子，我的任务是“在笔记本中写一段关于人工智能的简介”，此任务的拆解步骤是：\n```json\n[\n    {\"action_type\":\"PlanAction\",\"element\":\"打开笔记本\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"在笔记本中写一段关于人工智能的简介\"}\n]\n```\n\n\n现在，您的当前任务是 \"将吉林大学人工智能学院的第一段简介复制到已经打开的文本文档里\"，请根据现有屏幕图像的状态给出任务的拆解步骤。",
+    "LLM_response": "```json\n[\n    {\"action_type\":\"PlanAction\",\"element\":\"定位到吉林大学人工智能学院简介的第一段文字\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"用鼠标选择第一段文字\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"右键点击选择的文字并选择复制选项\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"切换到已经打开的文本文档窗口\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"定位到文本文档中需要粘贴的位置\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"右键点击并选择粘贴选项或按下键盘上的Ctrl+V粘贴文字\"}\n]\n```",
+    "LLM_response_editer": "```json\n[\n    {\"action_type\":\"PlanAction\",\"element\":\"复制第一段\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"打开文本文档\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"将复制的文本粘贴到文本文档里\"}\n]\n```",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2023-12-23_18-34-00-708805.jpg",
+    "session_id": "adc971ec65f14fab9da520596676466b",
+    "task_prompt_en": "Copy the first introduction of the Artificial Intelligence College of Jilin University to the opened text document",
+    "task_prompt_zh": "将吉林大学人工智能学院的第一段简介复制到已经打开的文本文档里",
+    "send_prompt_en": "You are familiar with the Linux operating system. Your task is to operate the computer screen and give a plan to complete the task.\nYou can see a computer screen with a height of 768 and a width of 1024. The current task is to \"copy the first introduction of the Artificial Intelligence Institute of Jilin University into the open text document\". You need to give a plan to complete this goal.\nPlease output your plan in json format. For example, my task is to search the Internet for \"What's wrong with crop circles?\" The disassembly steps of this task are:```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Open Browser\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Search the browser for \\\"What's wrong with crop circles?\\\"\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Open the first search result\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Browse web content\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Answer \\\"What's wrong with crop circles\\\" according to the content\"}\n]\n```Another example, my task is to \"write a brief introduction to AI in my notebook\". The disassembly steps of this task are:```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Open Notebook\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Write a brief introduction to AI in your notebook\"}\n]\n```Now, your current task is to \"copy the first introduction of the Artificial Intelligence Institute of Jilin University into the opened text document\". Please give the disassembly steps of the task according to the status of the existing screen image.",
+    "send_prompt_zh": "您对 Linux 操作系统非常熟悉。您的任务是操作计算机屏幕，给出完成任务的计划。\n您能看到一个计算机屏幕，高度：768，宽度：1024，当前任务为\"将吉林大学人工智能学院的第一段简介复制到已经打开的文本文档里\"，您需要给出完成该目标的计划。\n请以 json 格式输出您的计划，例如，我的任务是在网络上搜索“麦田怪圈是怎么回事”，此任务的拆解步骤是：\n```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"打开浏览器\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"在浏览器中搜索“麦田怪圈是怎么回事”\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"打开第一个搜索结果\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"浏览网页内容\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"根据内容回答“麦田怪圈是怎么回事”\"}\n]\n```\n\n另一个例子，我的任务是“在笔记本中写一段关于人工智能的简介”，此任务的拆解步骤是：\n```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"打开笔记本\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"在笔记本中写一段关于人工智能的简介\"}\n]\n```\n\n\n现在，您的当前任务是 \"将吉林大学人工智能学院的第一段简介复制到已经打开的文本文档里\"，请根据现有屏幕图像的状态给出任务的拆解步骤。",
+    "actions": [
+        {
+            "action_type": "PlanAction",
+            "element": "复制第一段"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "打开文本文档"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "将复制的文本粘贴到文本文档里"
+        }
+    ],
+    "LLM_response_editer_en": "```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Copy the first paragraph\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Open Text Document\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Paste the copied text into the text document\"}\n]\n```",
+    "LLM_response_editer_zh": "```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"复制第一段\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"打开文本文档\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"将复制的文本粘贴到文本文档里\"}\n]\n```"
+}

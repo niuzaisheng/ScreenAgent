@@ -1,0 +1,16 @@
+{
+    "task_prompt": "Search online for the latest developments in autonomous driving",
+    "send_prompt": "You're very familiar with the Windows operating system and UI operations.\nYour current goal is to act as a reward model to judge whether or not this image meets the goal, video width: 1024, video height: 768, the overall mission is: \"Search online for the latest developments in autonomous driving\".\n\nWe have developed an implementation plan for this overall mission:\n\n    1. Double-click on the Firefox Web Browser icon to open it.\n\n    2. Type Bing in a search engine address\n\n    3. Type 'latest developments in autonomous driving' into the search bar.\n\n    4. Browse through the search results looking for reliable and up-to-date sources.\n\n    5. Click on a search result to read more about the latest developments in autonomous driving.\n\n    6. Read the article or the content presented to gather information.\n\n\nNow the current subtask is: \"Click on a search result to read more about the latest developments in autonomous driving.\".\nPlease describe whether or not this image meets the current subtask, please answer json format:\nHere are a few options, if you think the current subtask is done well, then output this:\n```json  {\"action_type\":\"EvaluateSubTaskAction\", \"situation\": \"sub_task_success\"} ```\nThe mission will go on.\n\nIf you think the current subtask is not done well, need to retry, then output this:\n```json  {\"action_type\":\"EvaluateSubTaskAction\", \"situation\": \"need_retry\", \"advice\": \"I don't think you're clicking in the right place.\"} ```\nYou can give some suggestions for implementation improvements in the \"advice\" field.\n\nIf you feel that the whole plan does not match the current situation and you need to reformulate the implementation plan, please output:\n```json {\"action_type\":\"EvaluateSubTaskAction\", \"situation\": \"need_reformulate\", \"advice\": \"I think the current plan is not suitable for the current situation, because the system does not have .... installed\"} ```\nYou can give some suggestions for reformulating the plan in the \"advice\" field.\n\nPlease surround the json output with the symbols \"```json\" and \"```\".\nThe current goal is: \"Search online for the latest developments in autonomous driving\", please describe whether or not this image meets the goal in json format? And whether or not our mission can continue.",
+    "status": "evaluating",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2024-01-13_17-15-00-673475.jpg",
+    "current_task": "Read the article or the content presented to gather information.",
+    "actions": [
+        {
+            "action_type": "EvaluateSubTaskAction",
+            "situation": "need_retry",
+            "advice": "You have not finished the subtask."
+        }
+    ]
+}

@@ -111,7 +111,7 @@ llm_api:
 
 ### 如果使用LLaVA-1.5作为Agent
 
-请参考[LLaVA](https://github.com/haotian-liu/LLaVA)项目的来准备模型推理器，例如：
+请参考[LLaVA](https://github.com/haotian-liu/LLaVA)项目的来下载准备LLaVA-1.5模型，例如：
 
 ```bash
 git clone https://github.com/haotian-liu/LLaVA.git
@@ -120,9 +120,37 @@ conda create -n llava python=3.10 -y
 conda activate llava
 pip install --upgrade pip  # enable PEP 660 support
 pip install -e .
-python -m llava.serve.model_worker --host 0.0.0.0 --port 40000 --worker http://localhost:40000 --model-path liuhaotian/llava-v1.5-13b --no-register
 ```
 
+`model_workers/llava_model_worker.py`提供了一个LLaVA-1.5非流式的输出的推理器，您可以拷贝到`llava/serve/model_worker`下，并使用以下命令来启动：
+
+```bash
+cd llava
+python -m llava.serve.llava_model_worker --host 0.0.0.0 --port 40000 --worker http://localhost:40000 --model-path liuhaotian/llava-v1.5-13b --no-register
+```
+
+### 如果使用CogAgent作为Agent
+
+请参考[CogVLM](https://github.com/THUDM/CogVLM)项目下载准备CogAgent模型，例如：
+
+```bash
+git clone https://github.com/THUDM/CogVLM.git
+cd CogVLM
+conda create -n cogagent python=3.10 -y
+conda activate cogagent
+pip install -r requirements.txt
+```
+请在[这里](https://huggingface.co/THUDM/CogAgent/tree/main)下载sat版本的的CogAgent权重`cogagent-chat.zip`，解压后放到`CogVLM/checkpoints/`目录下。
+`model_workers/cogagent_model_worker.py`提供了一个CogAgent非流式的输出的推理器，您可以拷贝到`CogVLM/`下，并使用以下命令来启动：
+
+```bash
+cd CogVLM
+RANK=0 WORLD_SIZE=1 LOCAL_RANK=0 python ./model_worker.py --host 0.0.0.0  --port 40000 --from_pretrained "checkpoints/cogagent-chat" --bf16 --max_length 2048
+```
+
+### 如果使用ScreenAgent作为Agent
+
+ScreenAgent是在CogAgent的基础上训练的，
 
 # 运行
 准备工作完成后，你可以运行控制器了：
@@ -136,12 +164,122 @@ python run_controller.py -c config.yml
 
 ![Controller](assets/VNC_Viewer_screenshot.png "The controller interface")
 
+如果画面卡住，请尝试按下“Re-connect”按钮，控制器会尝试重新连接VNC Server。
+
+
+# 数据集
+
+所有的数据集和数据集的处理代码都在`data`目录下。我们使用了三个现有数据集COCO2014、Rico & widget-caption、Mind2Web
+
+## COCO
+我们使用COCO 2014 validation images作为视觉定位能力的训练数据集。您可以在[这里](https://cocodataset.org/#download)下载COCO 2014 train images，在这里我们使用的annotation信息是refcoco，split by unc。
+
+```
+├── COCO
+   ├── prompts # 用于训练Agent视觉定位能力的提示词模板
+   ├── train2014 # COCO 2014 train
+   └── annotations # COCO 2014 annotations
+```
+
+## Rico & widget-caption
+
+Rico 是一个包含了大量Android应用的截图和控件信息的数据集，您可以在[这里](http://www.interactionmining.org/rico.html)下载Rico数据集中 “1. UI Screenshots and View Hierarchies (6 GB)“ 的部分，文件名是`unique_uis.tar.gz`，请将解压后文件夹`combined`放在`data/Rico`目录下。
+widget-caption 是在Rico基础上对控件信息进行了标注，请在`data/Rico`下克隆`https://github.com/google-research-datasets/widget-caption`项目。
+最终目录结构如下：
+```
+├── Rico
+   ├── prompts # 用于训练Agent视觉定位能力的提示词模板
+   ├── combined # Rico dataset screenshots
+   └── widget-caption
+       ├── split
+       │   ├── dev.txt
+       │   ├── test.txt
+       │   └── train.txt
+       └── widget_captions.csv
+```
+
+## Mind2Web
+
+[Mind2Web](https://osu-nlp-group.github.io/Mind2Web/) 是一个真实模拟网页浏览数据集，您需要下下载原始数据集并进行处理，首先使用globus工具下载[这里](https://app.globus.org/file-manager?origin_id=32e6b738-a0b0-47f8-b475-26bf1c5ebf19)的原始网页截图，文件夹名称为`raw_dump`，放置在`data/Mind2Web/raw_dump`目录下，然后使用以下命令来处理数据集：
+
+```bash
+cd data/Mind2Web
+python convert_dataset.py
+```
+
+这段代码中会从huggingface datasets中下载`osunlp/Mind2Web`数据集的处理形式，请确保网络畅通，同时这一步会涉及到将英文指令翻译成中文指令，您需要在`data/Mind2Web/translate.py`中调用你自己的翻译API。
+目录结构如下：
+```
+├── Mind2Web
+   ├── convert_dataset.py
+   ├── translate.py
+   ├── prompts # 用于训练Agent网页浏览能力的提示词模板
+   ├── raw_dump # Mind2Web raw_dump downloaded from globus
+   └── processed_dataset # Created by convert_dataset.py
+```
+
+## ScreenAgent
+
+ScreenAgent是本文标注的数据集，分为训练和测试集合，目录结构如下：
+
+```
+├── data
+    ├── ScreenAgent
+        ├── train
+        │   ├── <session id>
+        │   │   ├── images
+        │   │   │   ├── <timestamp-1>.jpg
+        │   │   │   └── ...
+        │   │   ├── <timestamp-1>.json
+        │   │   └── ...
+        │   ├── ...
+        └── test
+```
+
+json文件中每个字段的含义：
+- session_id：Session ID
+- task_prompt：任务总体的目标
+- task_prompt_en：任务总体的目标（En）
+- task_prompt_zh：任务总体的目标（Zh）
+- send_prompt：发送给模型的完整提示词
+- send_prompt_en：发送给模型的完整提示词（En）
+- send_prompt_zh：发送给模型的完整提示词（Zh）
+- LLM_response：模型给出的原始回复文本，即RLHF中的 reject response
+- LLM_response_editer：人工修正后的回复文本，即RLHF中的 choice response
+- LLM_response_editer_en：人工修正后的回复文本（En）
+- LLM_response_editer_zh：人工修正后的回复文本（Zh）
+- video_height，video_width：图像的高度和宽度
+- saved_image_name：截图文件名，在每个session的images文件夹下
+- actions：从 LLM_response_editer 中解析出的动作序列
 
 # 训练
-如果你想训练自己的模型，或复现ScreenAgent模型，请参考`train`目录下的代码。
+如果你想训练自己的模型，或复现ScreenAgent模型，请先准备好以上的数据集，并在`train/dataset/mixture_dataset.py`文件中核对所有数据集的路径，如果只想使用其中一部分数据集或增加新的数据集，请在`train/dataset/mixture_dataset.py`中修改`make_supervised_data_module`函数。请在[这里](https://huggingface.co/THUDM/CogAgent/tree/main)下载sat版本的的CogAgent权重`cogagent-chat.zip`，解压后放到`train/saved_models/`目录下。
 
+您需要关注并检查以下文件：
+```
+train
+├── data -> ../data
+├── dataset
+│   └── mixture_dataset.py
+├── finetune_ScreenAgent.sh
+└── saved_models
+    └── cogagent-chat # unzip cogagent-chat.zip
+        ├── 1
+        │   └── mp_rank_00_model_states.pt
+        ├── latest
+        └── model_config.json
+```
+
+请根据您设备情况修改`train/finetune_ScreenAgent.sh`里面的参数，之后运行：
+```bash
+cd train
+bash finetune_ScreenAgent.sh
+```
+
+最后如果想将sat分布式训练的权重合并为一个权重文件，请参考`train/merge_model.sh`代码，请确保该文件中模型并行的个数`MP_SIZE`与`train/finetune_ScreenAgent.sh`中的`WORLD_SIZE`保持一致。修改`--from-pretrained`后参数为训练时存储的checkpoint位置。合并后的权重文件将保存为`train/saved_models/merged_model`文件夹。
 
 
 # TODO
+- [ ] 提供huggingface版本权重。
 - [ ] 简化控制器的设计，提供 no render 模式。
 - [ ] 集成Gym。

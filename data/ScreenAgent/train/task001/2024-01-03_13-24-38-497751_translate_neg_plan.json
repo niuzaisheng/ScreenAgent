@@ -1,0 +1,29 @@
+{
+    "task_prompt": "在打开的浏览器中打开吉林大学人工智能学院官网，然后将吉林大学人工智能学院官网的语言设置为英语。",
+    "send_prompt": "您对 Windows 操作系统非常熟悉。您的任务是操作计算机屏幕，给出完成任务的计划。\n您能看到一个计算机屏幕，高度：768，宽度：1024，当前任务为\"在打开的浏览器中打开吉林大学人工智能学院官网，然后将吉林大学人工智能学院官网的语言设置为英语。\"，您需要给出完成该目标的计划。\n请以 json 格式输出您的计划，例如，我的任务是在网络上搜索“麦田怪圈是怎么回事”，此任务的拆解步骤是：\n```json \n[\n    {\"action_type\":\"PlanAction\",\"element\":\"打开浏览器\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"在浏览器中搜索“麦田怪圈是怎么回事”\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"打开第一个搜索结果\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"浏览网页内容\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"根据内容回答“麦田怪圈是怎么回事”\"}\n]\n```\n\n另一个例子，我的任务是“在笔记本中写一段关于人工智能的简介”，此任务的拆解步骤是：\n```json\n[\n    {\"action_type\":\"PlanAction\",\"element\":\"打开笔记本\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"在笔记本中写一段关于人工智能的简介\"}\n]\n```\n\n\n现在，您的当前任务是 \"在打开的浏览器中打开吉林大学人工智能学院官网，然后将吉林大学人工智能学院官网的语言设置为英语。\"，请根据现有屏幕图像的状态给出任务的拆解步骤。",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2024-01-03_13-24-38-497751.jpg",
+    "current_task": "双击打开Microsoft Edge浏览器图标",
+    "session_id": "task001",
+    "task_prompt_en": "Open the official website of Artificial Intelligence College of Jilin University in the opened browser, and then set the language of the official website of Artificial Intelligence College of Jilin University to English.",
+    "task_prompt_zh": "在打开的浏览器中打开吉林大学人工智能学院官网，然后将吉林大学人工智能学院官网的语言设置为英语。",
+    "send_prompt_en": "You are familiar with the Windows operating system. Your task is to operate the computer screen and give a plan to complete the task.\nYou can see a computer screen with a height of 768 and a width of 1024. The current task is to \"open the official website of the Artificial Intelligence College of Jilin University in the open browser, and then set the language of the official website of the Artificial Intelligence College of Jilin University to English.\" You need to give a plan to complete this goal.\nPlease output your plan in json format. For example, my task is to search the Internet for \"What's wrong with crop circles?\" The disassembly steps of this task are:```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Open Browser\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Search the browser for \\\"What's wrong with crop circles?\\\"\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Open the first search result\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Browse web content\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Answer \\\"What's wrong with crop circles\\\" according to the content\"}\n]\n```Another example, my task is to \"write a brief introduction to AI in my notebook\". The disassembly steps of this task are:```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Open Notebook\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Write a brief introduction to AI in your notebook\"}\n]\n```Now, your current task is \"Open the official website of Jilin University Artificial Intelligence College in the open browser, and then set the language of the official website of Jilin University Artificial Intelligence College to English.\" Please give the disassembly steps of the task according to the status of the existing screen image.",
+    "send_prompt_zh": "您对 Windows 操作系统非常熟悉。您的任务是操作计算机屏幕，给出完成任务的计划。\n您能看到一个计算机屏幕，高度：768，宽度：1024，当前任务为\"在打开的浏览器中打开吉林大学人工智能学院官网，然后将吉林大学人工智能学院官网的语言设置为英语。\"，您需要给出完成该目标的计划。\n请以 json 格式输出您的计划，例如，我的任务是在网络上搜索“麦田怪圈是怎么回事”，此任务的拆解步骤是：\n```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"打开浏览器\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"在浏览器中搜索“麦田怪圈是怎么回事”\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"打开第一个搜索结果\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"浏览网页内容\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"根据内容回答“麦田怪圈是怎么回事”\"}\n]\n```\n\n另一个例子，我的任务是“在笔记本中写一段关于人工智能的简介”，此任务的拆解步骤是：\n```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"打开笔记本\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"在笔记本中写一段关于人工智能的简介\"}\n]\n```\n\n\n现在，您的当前任务是 \"在打开的浏览器中打开吉林大学人工智能学院官网，然后将吉林大学人工智能学院官网的语言设置为英语。\"，请根据现有屏幕图像的状态给出任务的拆解步骤。",
+    "actions": [
+        {
+            "action_type": "PlanAction",
+            "element": "选择官方网站进入"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "在官网页面中查找语言切换选项"
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "将语言设置切换至英语"
+        }
+    ],
+    "LLM_response_editer_en": "```json \n[\n\n    {\"action_type\":\"PlanAction\",\"element\":\"Select the official website to enter\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"Find language switching options on the official website page\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"Switch language settings to English\"}\n\n]\n```",
+    "LLM_response_editer_zh": "```json \n[\n\n    {\"action_type\":\"PlanAction\",\"element\":\"选择官方网站进入\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"在官网页面中查找语言切换选项\"},\n\n    {\"action_type\":\"PlanAction\",\"element\":\"将语言设置切换至英语\"}\n\n]\n```"
+}

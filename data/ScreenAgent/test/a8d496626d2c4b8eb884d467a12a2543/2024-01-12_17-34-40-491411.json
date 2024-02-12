@@ -1,0 +1,25 @@
+{
+    "task_prompt": "Jump the PDF to page 5",
+    "send_prompt": "You are familiar with the Windows operating system.\nYou can see a computer screen with height: 768, width: 1024, and the current task is \"Jump the PDF to page 5\", you need to give a plan to accomplish this goal.\nPlease output your plan in json format, e.g. my task is to search the web for \"What's the deal with the Wheat Field Circle?\", the steps to disassemble this task are:\n```json \n[\n    {\"action_type\":\"PlanAction\",\"element\":\"Open web browser.\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Search in your browser for \\\"What's the deal with the Wheat Field Circle?\\\"\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Open the first search result\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Browse the content of the page\"},\n    {\"action_type\":\"PlanAction\",\"element\":\"Answer the question \\\"What's the deal with the Wheat Field Circle?\\\" according to the content.\"}\n]\n```\n\nAnother example, my task is \"Write a brief paragraph about artificial intelligence in a notebook\", the steps to disassemble this task are:\n``json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Open Notebook\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Write a brief paragraph about AI in the notebook\"}\n]\n```\n\nNow, your current task is \"Jump the PDF to page 5\", give the disassembly steps of the task based on the state of the existing screen image.",
+    "status": "planning",
+    "LLM_response": "```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Move the cursor to the page number input box at the top of the PDF viewer.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Click the page number input box to focus on it.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Type '5' into the page number input box.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Press the 'Enter' key to jump to page 5 of the PDF.\"}\n]\n```",
+    "LLM_response_editer": "```json\n[\n    {\"action_type\": \"PlanAction\", \"element\": \"Click the page number input box at the top of the PDF viewer.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Type '5' into the page number input box.\"},\n    {\"action_type\": \"PlanAction\", \"element\": \"Press the 'Enter' key to jump to page 5 of the PDF.\"}\n]\n```",
+    "video_height": 768,
+    "video_width": 1024,
+    "saved_image_name": "2024-01-12_17-34-40-491411.jpg",
+    "current_task": "Click the page number input box at the top of the PDF viewer.",
+    "actions": [
+        {
+            "action_type": "PlanAction",
+            "element": "Click the page number input box at the top of the PDF viewer."
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "Type '5' into the page number input box."
+        },
+        {
+            "action_type": "PlanAction",
+            "element": "Press the 'Enter' key to jump to page 5 of the PDF."
+        }
+    ]
+}

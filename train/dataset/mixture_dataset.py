@@ -48,8 +48,8 @@ def make_supervised_data_module(image_processor, cross_image_processor, text_pro
     coco_data_args = namedtuple('ARGS', coco_data_args.keys())(*coco_data_args.values())
 
     ScreenAgent_data_args = {
-        "train_data_path": 'data/ScreenAgent/translated',
-        "eval_data_path": 'data/ScreenAgent/translated', # TODO: eval
+        "train_data_path": 'data/ScreenAgent/train',
+        "eval_data_path": 'data/ScreenAgent/test',
     }
     ScreenAgent_data_args = namedtuple('ARGS', ScreenAgent_data_args.keys())(*ScreenAgent_data_args.values())
 
