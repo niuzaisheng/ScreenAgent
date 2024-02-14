@@ -2,10 +2,11 @@
 <h1 align="center"> ScreenAgent: 视觉语言大模型驱动的计算机控制智能体</h1>
 </p>
 
+[View ScreenAgent Paper](https://arxiv.org/abs/2402.07945)
+
 我们构建了 ScreenAgent 项目，为视觉语言模型智能体（VLM Agent）构建了一个与真实计算机屏幕交互的环境。在这个环境中，智能体可以观察屏幕截图，并通过输出鼠标和键盘操作来操纵图形用户界面。我们还设计了一个自动控制流程，其中包括计划、行动和反思阶段，引导智能体与环境持续交互并完成多步骤任务。此外，我们还构建了 ScreenAgent 数据集，该数据集收集了完成各种日常计算机任务时的屏幕截图和动作序列。
 
 ![Framework](assets/Conception.png "The framework of AttExplainer")
-
 
 项目主要包括以下部分：
 ```

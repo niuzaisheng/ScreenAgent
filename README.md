@@ -2,7 +2,7 @@
 <h1 align="center"> ScreenAgent: A Computer Control Agent Driven by Visual Language Large Model</h1>
 </p>
 
-[View ScreenAgent Paper](assets/ScreenAgent.pdf)
+[View ScreenAgent Paper](https://arxiv.org/abs/2402.07945)
 
 [中文版Readme](README-zh.md)
 
