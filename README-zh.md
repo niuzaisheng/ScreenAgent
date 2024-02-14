@@ -1,5 +1,6 @@
 <p align="center">
-<h1 align="center"> ScreenAgent: 视觉语言大模型驱动的计算机控制智能体</h1>
+
+<h1 align="center"> ScreenAgent <img src="assets/ScreenAgent.png" alt="ScreenAgent Logo" width="30">：视觉语言大模型驱动的计算机控制智能体</h1>
 </p>
 
 [ScreenAgent 论文链接 arxiv:2402.07945](https://arxiv.org/abs/2402.07945)
@@ -185,7 +186,11 @@ python run_controller.py -c config.yml
 
 控制器界面如下，您需要先从左侧双击选择一个任务，然后按下“Start Automation”按钮，控制器会按照计划-行动-反思的流程自动运行，控制器会采集当前的屏幕画面、填充提示词模版、发送图像和完整提示词给大模型推理器、解析大模型推理器的回复、发送鼠标键盘控制命令给VNC Server，循环往复。
 
-![Controller](assets/VNC_Viewer_screenshot.png "The controller interface")
+<div align="center">
+  <img src="assets/VNC_Viewer_screenshot.png" alt="Controller" width="70%">
+  <p><i>控制器界面</i></p>
+</div>
+
 
 如果画面卡住，请尝试按下“Re-connect”按钮，控制器会尝试重新连接VNC Server。
 
@@ -275,6 +280,11 @@ json文件中每个字段的含义：
 - saved_image_name：截图文件名，在每个session的images文件夹下
 - actions：从 LLM_response_editer 中解析出的动作序列
 
+<div align="center">
+  <img src="assets/DatasetExample.png" alt="Dataset Example" width="100%">
+  <p><i>ScreenAgent数据集中的一个案例</i></p>
+</div>
+
 # 训练 ScreenAgent
 如果你想训练自己的模型，或复现ScreenAgent模型，请先准备好以上的数据集，并在`train/dataset/mixture_dataset.py`文件中核对所有数据集的路径，如果只想使用其中一部分数据集或增加新的数据集，请在`train/dataset/mixture_dataset.py`中修改`make_supervised_data_module`函数。请在[这里](https://huggingface.co/THUDM/CogAgent/tree/main)下载sat版本的的CogAgent权重`cogagent-chat.zip`，解压后放到`train/saved_models/`目录下。
 
@@ -306,3 +316,4 @@ bash finetune_ScreenAgent.sh
 - [ ] 提供huggingface版本权重。
 - [ ] 简化控制器的设计，提供 no render 模式。
 - [ ] 集成Gym。
+- [ ] 增加技能库，支持更为复杂的函数调用。

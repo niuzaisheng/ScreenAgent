@@ -1,5 +1,5 @@
 <p align="center">
-<h1 align="center"> ScreenAgent: A Computer Control Agent Driven by Visual Language Large Model</h1>
+<h1 align="center"> ScreenAgent <img src="assets/ScreenAgent.png" alt="ScreenAgent Logo" width="30"> : A Computer Control Agent Driven by Visual Language Large Model</h1>
 </p>
 
 [View ScreenAgent Paper arxiv:2402.07945](https://arxiv.org/abs/2402.07945)
@@ -186,7 +186,11 @@ python run_controller.py -c config.yml
 
 The controller interface is as follows. You need to double-click to select a task from the left side first, then press the "Start Automation" button. The controller will automatically run according to the plan-action-reflection process. The controller will collect the current screen image, fill in the prompt word template, send the image and complete prompt words to the large model inferencer, parse the reply from the large model inferencer, send mouse and keyboard control commands to the VNC Server, and repeat the process.
 
-![Controller](assets/VNC_Viewer_screenshot.png "The controller interface")
+<div align="center">
+  <img src="assets/VNC_Viewer_screenshot.png" alt="Controller" width="70%">
+  <p><i>The controller interface</i></p>
+</div>
+
 
 If the screen is stuck, try pressing the "Re-connect" button. The controller will try to reconnect to the VNC Server.
 
@@ -282,6 +286,11 @@ The meaning of each field in the json file:
 - saved_image_name: Screenshot filename, under each session's images folder
 - actions: Action sequence parsed from LLM_response_editer
 
+<div align="center">
+  <img src="assets/DatasetExample.png" alt="Dataset Example" width="100%">
+  <p><i>An Example in ScreenAgent Dataset</i></p>
+</div>
+
 # Train ScreenAgent
 If you want to train your own model, or reproduce the ScreenAgent model, please prepare the above datasets first, and check all dataset paths in the `train/dataset/mixture_dataset.py` file. If you only want to use part of the datasets or add new datasets, please modify the `make_supervised_data_module` function in `train/dataset/mixture_dataset.py`. Please download the sat version of the CogAgent weights `cogagent-chat.zip` from [here](https://huggingface.co/THUDM/CogAgent/tree/main), unzip it and place it in the `train/saved_models/` directory.
 
@@ -312,3 +321,4 @@ Finally, if you want to merge the weights of sat distributed training into a sin
 - [ ] Provide huggingface transformers weights.
 - [ ] Simplify the design of the controller, provide a no render mode.
 - [ ] Integrate Gym.
+- [ ] Add skill libraries to support more complex function calls.
