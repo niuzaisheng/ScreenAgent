@@ -8,7 +8,31 @@
 
 We have built the ScreenAgent project, creating an environment for Visual Language Model agents (VLM Agent) to interact with real computer screens. In this environment, the agent can observe screenshots and manipulate the GUI by outputting mouse and keyboard operations. We have also designed an automatic control process, which includes planning, action, and reflection stages, guiding the agent to continuously interact with the environment and complete multi-step tasks. In addition, we have built the ScreenAgent dataset, which collects screenshots and action sequences when completing various daily computer tasks.
 
-![Framework](assets/Conception.png)
+<div align="center">
+  <img src="assets/Conception.png" alt="Motivation" width="50%">
+  <p><i>ScreenAgent Design Motivation</i></p>
+</div>
+
+To guide the VLM Agent to interact continuously with the computer screen, we have built a process that includes "planning-execution-reflection". In the planning phase, the Agent is asked to break down the user task into subtasks. In the execution phase, the Agent will observe the screenshot and give specific mouse and keyboard actions to execute the subtasks. The controller will execute these actions and feed back the execution results to the Agent. In the reflection phase, the Agent will observe the execution results, judge the current state, and choose to continue execution, retry, or adjust the plan. This process will continue until the task is completed.
+
+<div align="center">
+  <img src="assets/figure2.png" alt="Running process" width="100%">
+  <p><i>Running Process</i></p>
+</div>
+
+We referred to the VNC remote desktop connection protocol to design the action space of the Agent, which are all the most basic mouse and keyboard operations. Most of the mouse click operations require the Agent to give the exact screen coordinate position. Compared with calling specific APIs to complete tasks, this method is more universal and can be applied to various desktop operating systems and applications.
+
+<div align="center">
+  <img src="assets/ActionSpace.png" alt="Action Space" width="50%">
+  <p><i>Supported Action Types and Action Attributes</i></p>
+</div>
+
+Teaching the Agent to use a computer is not a simple matter. It requires the Agent to have multiple comprehensive abilities such as task planning, image understanding, visual positioning, and tool use. For this reason, we manually annotated the ScreenAgent dataset. This dataset covers a variety of daily computer tasks, including file operations, web browsing, gaming entertainment and other scenarios. We build a session according to the above "planning-execution-reflection" process.
+
+<div align="center">
+  <img src="assets/Dataset.png" alt="Dataset Task Type Distribution" width="50%">
+  <p><i>Dataset Task Type Distribution</i></p>
+</div>
 
 The project mainly includes the following parts:
 ```
