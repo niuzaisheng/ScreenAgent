@@ -194,7 +194,7 @@ If the screen is stuck, try pressing the "Re-connect" button. The controller wil
 
 All datasets and dataset processing code are in the `data` directory. We used three existing datasets: COCO2014, Rico & widget-caption, and Mind2Web.
 
-## COCO
+## COCO Dataset
 We used COCO 2014 validation images as the training dataset for visual positioning capabilities. You can download COCO 2014 train images from [here](https://cocodataset.org/#download). The annotation information we used here is refcoco, split by unc.
 
 ```
@@ -204,7 +204,7 @@ We used COCO 2014 validation images as the training dataset for visual positioni
    └── annotations # COCO 2014 annotations
 ```
 
-## Rico & widget-caption
+## Rico & widget-caption Dataset
 
 Rico is a dataset that contains a large number of screenshots and widget information of Android applications. You can download the "1. UI Screenshots and View Hierarchies (6 GB)" part of the Rico dataset from [here](http://www.interactionmining.org/rico.html). The file name is `unique_uis.tar.gz`. Please put the unzipped `combined` folder in the `data/Rico` directory.
 widget-caption is an annotation of widget information based on Rico. Please clone the `https://github.com/google-research-datasets/widget-caption` project under `data/Rico`.
@@ -221,7 +221,7 @@ The final directory structure is as follows:
        └── widget_captions.csv
 ```
 
-## Mind2Web
+## Mind2Web Dataset 
 
 [Mind2Web](https://osu-nlp-group.github.io/Mind2Web/) is a real simulated web browsing dataset. You need to download the original dataset and process it. First, use the globus tool to download the original web screenshots from [here](https://app.globus.org/file-manager?origin_id=32e6b738-a0b0-47f8-b475-26bf1c5ebf19). The folder name is `raw_dump`, placed in the `data/Mind2Web/raw_dump` directory, and then use the following command to process the dataset:
 
@@ -248,7 +248,7 @@ The directory structure is as follows:
    └── processed_dataset # Created by convert_dataset.py
 ```
 
-## ScreenAgent
+## ScreenAgent Dataset
 
 ScreenAgent is the dataset annotated in this paper, divided into training and testing sets, the directory structure is as follows:
 
@@ -282,7 +282,7 @@ The meaning of each field in the json file:
 - saved_image_name: Screenshot filename, under each session's images folder
 - actions: Action sequence parsed from LLM_response_editer
 
-# Training
+# Train ScreenAgent
 If you want to train your own model, or reproduce the ScreenAgent model, please prepare the above datasets first, and check all dataset paths in the `train/dataset/mixture_dataset.py` file. If you only want to use part of the datasets or add new datasets, please modify the `make_supervised_data_module` function in `train/dataset/mixture_dataset.py`. Please download the sat version of the CogAgent weights `cogagent-chat.zip` from [here](https://huggingface.co/THUDM/CogAgent/tree/main), unzip it and place it in the `train/saved_models/` directory.
 
 You need to pay attention to and check the following files:

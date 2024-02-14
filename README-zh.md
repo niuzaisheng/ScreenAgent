@@ -194,7 +194,7 @@ python run_controller.py -c config.yml
 
 所有的数据集和数据集的处理代码都在`data`目录下。我们使用了三个现有数据集COCO2014、Rico & widget-caption、Mind2Web
 
-## COCO
+## COCO Dataset
 我们使用COCO 2014 validation images作为视觉定位能力的训练数据集。您可以在[这里](https://cocodataset.org/#download)下载COCO 2014 train images，在这里我们使用的annotation信息是refcoco，split by unc。
 
 ```
@@ -204,7 +204,7 @@ python run_controller.py -c config.yml
    └── annotations # COCO 2014 annotations
 ```
 
-## Rico & widget-caption
+## Rico & widget-caption Dataset
 
 Rico 是一个包含了大量Android应用的截图和控件信息的数据集，您可以在[这里](http://www.interactionmining.org/rico.html)下载Rico数据集中 “1. UI Screenshots and View Hierarchies (6 GB)“ 的部分，文件名是`unique_uis.tar.gz`，请将解压后文件夹`combined`放在`data/Rico`目录下。
 widget-caption 是在Rico基础上对控件信息进行了标注，请在`data/Rico`下克隆`https://github.com/google-research-datasets/widget-caption`项目。
@@ -221,7 +221,7 @@ widget-caption 是在Rico基础上对控件信息进行了标注，请在`data/R
        └── widget_captions.csv
 ```
 
-## Mind2Web
+## Mind2Web Dataset
 
 [Mind2Web](https://osu-nlp-group.github.io/Mind2Web/) 是一个真实模拟网页浏览数据集，您需要下下载原始数据集并进行处理，首先使用globus工具下载[这里](https://app.globus.org/file-manager?origin_id=32e6b738-a0b0-47f8-b475-26bf1c5ebf19)的原始网页截图，文件夹名称为`raw_dump`，放置在`data/Mind2Web/raw_dump`目录下，然后使用以下命令来处理数据集：
 
@@ -241,7 +241,7 @@ python convert_dataset.py
    └── processed_dataset # Created by convert_dataset.py
 ```
 
-## ScreenAgent
+## ScreenAgent Dataset
 
 ScreenAgent是本文标注的数据集，分为训练和测试集合，目录结构如下：
 
@@ -275,7 +275,7 @@ json文件中每个字段的含义：
 - saved_image_name：截图文件名，在每个session的images文件夹下
 - actions：从 LLM_response_editer 中解析出的动作序列
 
-# 训练
+# 训练 ScreenAgent
 如果你想训练自己的模型，或复现ScreenAgent模型，请先准备好以上的数据集，并在`train/dataset/mixture_dataset.py`文件中核对所有数据集的路径，如果只想使用其中一部分数据集或增加新的数据集，请在`train/dataset/mixture_dataset.py`中修改`make_supervised_data_module`函数。请在[这里](https://huggingface.co/THUDM/CogAgent/tree/main)下载sat版本的的CogAgent权重`cogagent-chat.zip`，解压后放到`train/saved_models/`目录下。
 
 您需要关注并检查以下文件：
