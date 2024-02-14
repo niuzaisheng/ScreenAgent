@@ -2,9 +2,9 @@
 <h1 align="center"> ScreenAgent: A Computer Control Agent Driven by Visual Language Large Model</h1>
 </p>
 
-[View ScreenAgent Paper](https://arxiv.org/abs/2402.07945)
+[View ScreenAgent Paper arxiv:2402.07945](https://arxiv.org/abs/2402.07945)
 
-[中文版Readme](README-zh.md)
+[中文版 Readme](README-zh.md)
 
 We have built the ScreenAgent project, creating an environment for Visual Language Model agents (VLM Agent) to interact with real computer screens. In this environment, the agent can observe screenshots and manipulate the GUI by outputting mouse and keyboard operations. We have also designed an automatic control process, which includes planning, action, and reflection stages, guiding the agent to continuously interact with the environment and complete multi-step tasks. In addition, we have built the ScreenAgent dataset, which collects screenshots and action sequences when completing various daily computer tasks.
 
