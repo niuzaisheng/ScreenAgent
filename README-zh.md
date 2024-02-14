@@ -2,11 +2,39 @@
 <h1 align="center"> ScreenAgent: 视觉语言大模型驱动的计算机控制智能体</h1>
 </p>
 
-[View ScreenAgent Paper](https://arxiv.org/abs/2402.07945)
+[ScreenAgent 论文链接 arxiv:2402.07945](https://arxiv.org/abs/2402.07945)
 
 我们构建了 ScreenAgent 项目，为视觉语言模型智能体（VLM Agent）构建了一个与真实计算机屏幕交互的环境。在这个环境中，智能体可以观察屏幕截图，并通过输出鼠标和键盘操作来操纵图形用户界面。我们还设计了一个自动控制流程，其中包括计划、行动和反思阶段，引导智能体与环境持续交互并完成多步骤任务。此外，我们还构建了 ScreenAgent 数据集，该数据集收集了完成各种日常计算机任务时的屏幕截图和动作序列。
 
-![Framework](assets/Conception.png "The framework of AttExplainer")
+<div align="center">
+  <img src="assets/Conception.png" alt="Motivation" width="50%">
+  <p><i>ScreenAgent 设计动机</i></p>
+</div>
+
+为了引导VLM Agent与计算机屏幕进行持续的交互，我们构建了一个包含“计划-执行-反思”的运行流程。在计划阶段，Agent被要求将用户任务拆解为子任务。在执行阶段，Agent将观察屏幕截图，给出执行子任务的具体鼠标和键盘动作。控制器将执行这些动作，并将执行结果反馈给Agent。在反思阶段，Agent将观察执行结果，并判定当前的状态，选择继续执行、重试或调整计划。这一流程将持续进行，直到任务完成。
+
+<div align="center">
+  <img src="assets/figure2.png" alt="Running process" width="100%">
+  <p><i>自动化的运行流程</i></p>
+</div>
+
+我们参考了VNC远程桌面连接协议来设计Agent的动作空间，其中都是最为基础的鼠标和键盘操作，鼠标的大部分点击操作都需要Agent给出精确的屏幕坐标位置。相比起调用特定的API来完成任务，这种方式更加通用，可以适用于各种桌面操作系统和应用程序，对用户更具可解释性。
+
+<div align="center">
+  <img src="assets/ActionSpace.png" alt="Action Space" width="50%">
+  <p><i>支持的动作类型和动作属性</i></p>
+</div>
+
+要教会Agent使用电脑并不是一件简单的事情，需要Agent具备任务规划、图像理解、视觉定位、工具使用等多种综合能力，为此我们人工标注了ScreenAgent数据集，这一数据集涵盖了多种日常计算机任务，包括文件操作、网页浏览、游戏娱乐等场景。我们按照上述的“计划-执行-反思”的运行流程来构建一个session。
+
+<div align="center">
+  <img src="assets/Dataset.png" alt="Dataset Task Type Distribution" width="50%">
+  <p><i>ScreenAgent 数据集任务类型分布</i></p>
+</div>
+
+
+电脑是人类最为强大且通用的工具，通过训练 ScreenAgent 这样能够使用电脑的模型，有望构建一个更通用的代理，协助人类完成各种日常数字工作。
+
 
 项目主要包括以下部分：
 ```
