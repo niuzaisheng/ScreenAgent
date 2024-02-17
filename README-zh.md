@@ -317,3 +317,16 @@ bash finetune_ScreenAgent.sh
 - [ ] 简化控制器的设计，提供 no render 模式。
 - [ ] 集成Gym。
 - [ ] 增加技能库，支持更为复杂的函数调用。
+
+# 引用本文
+
+```bib
+@article{niu2024screenagent,
+      title={ScreenAgent: A Vision Language Model-driven Computer Control Agent}, 
+      author={Runliang Niu and Jindong Li and Shiqi Wang and Yali Fu and Xiyu Hu and Xueyuan Leng and He Kong and Yi Chang and Qi Wang},
+      year={2024},
+      eprint={2402.07945},
+      archivePrefix={arXiv},
+      primaryClass={cs.HC}
+}
+```

@@ -322,3 +322,16 @@ Finally, if you want to merge the weights of sat distributed training into a sin
 - [ ] Simplify the design of the controller, provide a no render mode.
 - [ ] Integrate Gym.
 - [ ] Add skill libraries to support more complex function calls.
+
+# Citation
+
+```bib
+@article{niu2024screenagent,
+      title={ScreenAgent: A Vision Language Model-driven Computer Control Agent}, 
+      author={Runliang Niu and Jindong Li and Shiqi Wang and Yali Fu and Xiyu Hu and Xueyuan Leng and He Kong and Yi Chang and Qi Wang},
+      year={2024},
+      eprint={2402.07945},
+      archivePrefix={arXiv},
+      primaryClass={cs.HC}
+}
+```
