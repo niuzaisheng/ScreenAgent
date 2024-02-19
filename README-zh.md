@@ -330,3 +330,10 @@ bash finetune_ScreenAgent.sh
       primaryClass={cs.HC}
 }
 ```
+
+# 许可信息
+```
+Code License: MIT
+Dataset License: Apache-2.0
+Model License: The CogVLM License
+```

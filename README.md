@@ -335,3 +335,10 @@ Finally, if you want to merge the weights of sat distributed training into a sin
       primaryClass={cs.HC}
 }
 ```
+
+# License
+```
+Code License: MIT
+Dataset License: Apache-2.0
+Model License: The CogVLM License
+```
