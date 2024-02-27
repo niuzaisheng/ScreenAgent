@@ -4,7 +4,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import torch
 import argparse
-from utils.models import FineTuneTrainCogAgentModel
+from models import FineTuneTrainCogAgentModel
 from sat.training.model_io import save_checkpoint
 
 def main():

@@ -1,11 +1,7 @@
-import datetime
 import logging
 import logging.handlers
 import os
 import sys
-
-import requests
-
 
 LOGDIR = "model_worker_logs"
 

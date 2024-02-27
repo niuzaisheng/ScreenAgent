@@ -19,8 +19,8 @@ from sat.model.mixins import CachedAutoregressiveMixin
 from sat.training.deepspeed_training import training_main
 from torch.nn import CrossEntropyLoss
 from dataset.mixture_dataset import make_supervised_data_module
-from utils.models import FineTuneTrainCogAgentModel
-from utils.utils import (get_image_processor, llama2_text_processor, llama2_text_processor_inference)
+from models import FineTuneTrainCogAgentModel
+from utils import (get_image_processor, llama2_text_processor, llama2_text_processor_inference)
 
 
 def disable_untrainable_params(self):
@@ -273,7 +273,7 @@ if __name__ == '__main__':
     if args.use_qlora and torch.cuda.is_available():
         model = model.to('cuda')
     
-    from utils.utils import llama2_tokenizer
+    from utils import llama2_tokenizer
     tokenizer = llama2_tokenizer(args.local_tokenizer, signal_type=args.version)
     image_processor = get_image_processor(args.eva_args["image_size"][0])
     cross_image_processor = get_image_processor(args.cross_image_pix)

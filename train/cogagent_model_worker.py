@@ -1,17 +1,11 @@
 """
 A model worker executes the model.
 """
-import re
 import argparse
-import asyncio
-import json
 import time
-import threading
 import uuid
 
-from fastapi import FastAPI, Request, BackgroundTasks
-from fastapi.responses import StreamingResponse
-import requests
+from fastapi import FastAPI, Request
 import torch
 import uvicorn
 from functools import partial
@@ -21,11 +15,9 @@ from io import BytesIO
 import base64
 
 from sat.model.mixins import CachedAutoregressiveMixin
-from sat.quantization.kernels import quantize
 from sat.model import AutoModel
 
-from utils.models import FineTuneTrainCogAgentModel
-from utils.utils import chat, llama2_tokenizer, llama2_text_processor, llama2_text_processor_inference, get_image_processor
+from utils import chat, llama2_tokenizer, llama2_text_processor_inference, get_image_processor
 
 from logger_util import build_logger
 
