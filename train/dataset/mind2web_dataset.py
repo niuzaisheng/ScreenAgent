@@ -10,7 +10,7 @@ from torch.utils.data import Dataset
 
 class Mind2WebConstructDataset(Dataset):
     
-    def __init__(self, image_processor, cross_image_processor, text_processor, data_dir, answer_digit_regression=False, **kwargs):
+    def __init__(self, image_processor, cross_image_processor, text_processor, data_dir):
 
         super().__init__()
         self.image_processor, self.text_processor, self.cross_image_processor = image_processor, text_processor, cross_image_processor

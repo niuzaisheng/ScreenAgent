@@ -248,8 +248,7 @@ class COCODatasetBase(Dataset):
     
     def __init__(self, image_processor, cross_image_processor, text_processor,
                  vis_root, ann_path, templates_path, 
-                 dataset='refcoco', splitBy='unc', split="train",
-                 answer_digit_regression=False):
+                 dataset='refcoco', splitBy='unc', split="train"):
         """
         vis_root (string): Root directory of images (e.g. coco/images/)
         ann_root (string): directory to store the annotation file
@@ -262,12 +261,11 @@ class COCODatasetBase(Dataset):
         self.vis_root = vis_root
         self.split = split
         self.templates_path = templates_path
-        self.answer_digit_regression = answer_digit_regression
 
         self.refer = REFER(ann_path, vis_root, dataset, splitBy)
         self.ref_ids = self.refer.getRefIds(split=split)
 
-    def load_templates(self, template_file_name, for_digit_regression=False):
+    def load_templates(self, template_file_name):
         with open(os.path.join(self.templates_path, template_file_name) , "r") as f:
             template = f.read()
         return JinjaTemplate(template)
@@ -324,12 +322,12 @@ class ScreenAgentReferCOCODataset(COCODatasetBase):
 
         self.template_file_name = {
             "send_prompt_en": self.load_templates("refer_send_prompt_en.txt"),
-            "answer_click_en": self.load_templates("refer_answer_click_en.txt", for_digit_regression=self.answer_digit_regression),
-            "answer_drag_en": self.load_templates("refer_answer_drag_en.txt", for_digit_regression=self.answer_digit_regression),
+            "answer_click_en": self.load_templates("refer_answer_click_en.txt"),
+            "answer_drag_en": self.load_templates("refer_answer_drag_en.txt"),
 
             "send_prompt_zh": self.load_templates("refer_send_prompt_zh.txt"),
-            "answer_click_zh": self.load_templates("refer_answer_click_zh.txt", for_digit_regression=self.answer_digit_regression),
-            "answer_drag_zh": self.load_templates("refer_answer_drag_zh.txt", for_digit_regression=self.answer_digit_regression)
+            "answer_click_zh": self.load_templates("refer_answer_click_zh.txt"),
+            "answer_drag_zh": self.load_templates("refer_answer_drag_zh.txt")
         }
 
     def preprocess(self, index):
@@ -347,8 +345,6 @@ class ScreenAgentReferCOCODataset(COCODatasetBase):
         language = random.choice(["en","zh"])
         send_prompt_template = self.template_file_name[f"send_prompt_{language}"]
 
-
-        digital_regression_value = []
         action_type = random.choice(["click","drag"])
         if action_type == "click":
             send_prompt = send_prompt_template.render(
@@ -363,8 +359,6 @@ class ScreenAgentReferCOCODataset(COCODatasetBase):
                 center_width = int((bbox[0] + bbox[2]) / 2), 
                 center_height = int((bbox[1] + bbox[3]) / 2),
             )
-            if self.answer_digit_regression:
-                answer, digital_regression_value = answer
 
         elif action_type == "drag":
             send_prompt = send_prompt_template.render(
@@ -381,15 +375,9 @@ class ScreenAgentReferCOCODataset(COCODatasetBase):
                 drag_end_width = int(bbox[2]),
                 drag_end_height = int(bbox[3]),
             )
-            if self.answer_digit_regression:
-                answer, digital_regression_value = answer
 
-        if self.answer_digit_regression:
-            digital_regression_value = [x/1000 for x in digital_regression_value]
-            text_dict = self.text_processor(answer, send_prompt, digital_regression_value)
-        else:
-            text_dict = self.text_processor(answer, send_prompt)
 
+        text_dict = self.text_processor(answer, send_prompt)
 
         ret = {**img_dict, **text_dict, "question_id": f"coco_{ref_id}"}
         return ret
