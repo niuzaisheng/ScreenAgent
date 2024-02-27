@@ -2,10 +2,10 @@ import random
 from collections import namedtuple
 from torch.utils.data import Dataset, ConcatDataset, Subset
 
-from utils.dataset.coco_dataset import ScreenAgentReferCOCODataset
-from utils.dataset.screenagent_dataset import ScreenAgentDataset
-from utils.dataset.mind2web_dataset import Mind2WebFilteredDataset, Mind2WebConstructDataset
-from utils.dataset.widget_captions_dataset import WidgetCaptionsDataset
+from .coco_dataset import ScreenAgentReferCOCODataset
+from .screenagent_dataset import ScreenAgentDataset
+from .mind2web_dataset import Mind2WebFilteredDataset, Mind2WebConstructDataset
+from .widget_captions_dataset import WidgetCaptionsDataset
 
 
 class LimitedSubset(Subset):

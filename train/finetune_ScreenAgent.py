@@ -18,7 +18,7 @@ from sat.model.finetune.prompt_tuning import PTuningV2Mixin
 from sat.model.mixins import CachedAutoregressiveMixin
 from sat.training.deepspeed_training import training_main
 from torch.nn import CrossEntropyLoss
-from utils.dataset.mixture_dataset import make_supervised_data_module
+from dataset.mixture_dataset import make_supervised_data_module
 from utils.models import FineTuneTrainCogAgentModel
 from utils.utils import (get_image_processor, llama2_text_processor, llama2_text_processor_inference)
 
