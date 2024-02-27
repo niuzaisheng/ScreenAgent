@@ -4,7 +4,7 @@ from torch.utils.data import Dataset, ConcatDataset, Subset
 
 from .coco_dataset import ScreenAgentReferCOCODataset
 from .screenagent_dataset import ScreenAgentDataset
-from .mind2web_dataset import Mind2WebFilteredDataset, Mind2WebConstructDataset
+from .mind2web_dataset import Mind2WebConstructDataset
 from .widget_captions_dataset import WidgetCaptionsDataset
 
 
