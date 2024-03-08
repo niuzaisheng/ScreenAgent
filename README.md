@@ -323,6 +323,17 @@ Finally, if you want to merge the weights of sat distributed training into a sin
 - [ ] Integrate Gym.
 - [ ] Add skill libraries to support more complex function calls.
 
+# Related Projects
+- Mobile-Agent: Autonomous Multi-Modal Mobile Device Agent with Visual Perception http://arxiv.org/abs/2401.16158
+- UFO: A UI-Focused Agent for Windows OS Interaction http://arxiv.org/abs/2402.07939
+- ScreenAI: A Vision-Language Model for UI and Infographics Understanding http://arxiv.org/abs/2402.04615
+- AppAgent: Multimodal Agents as Smartphone Users http://arxiv.org/abs/2312.13771
+- CogAgent: A Visual Language Model for GUI Agents http://arxiv.org/abs/2312.08914
+- Screen2Words: Automatic Mobile UI Summarization with Multimodal Learning http://arxiv.org/abs/2108.03353
+- A Real-World WebAgent with Planning, Long Context Understanding, and Program Synthesis http://arxiv.org/abs/2307.12856
+- Comprehensive Cognitive LLM Agent for Smartphone GUI Automation http://arxiv.org/abs/2402.11941
+- Towards General Computer Control: A Multimodal Agent for Red Dead Redemption II as a Case Study https://arxiv.org/abs/2403.03186
+
 # Citation
 
 ```bib
