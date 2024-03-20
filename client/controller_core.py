@@ -452,7 +452,6 @@ class VNCWidget(QMainWindow):
         print(f"[func:ask_llm_sync] send_prompt: {self.send_prompt}")
         request_id = uuid.uuid4().hex
         self._request_recall_func_cache[request_id] = ask_llm_recall_func
-        self.save_current_image()
         self.parse_action_display.clear()
         self.llm_client_gpt.send_request_to_server(self.send_prompt, image, request_id, self._send_to_main_ask_llm_sync_recall_func)
 
