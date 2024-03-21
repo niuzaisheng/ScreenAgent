@@ -173,7 +173,7 @@ ScreenAgent is trained based on CogAgent. Download the sat format weight file `S
 
 ```bash
 cd train
-RANK=0 WORLD_SIZE=1 LOCAL_RANK=0 python ./cogagent_model_worker.py --host 0.0.0.0  --port 40000 --from_pretrained "saved_models/ScreenAgent-2312" --bf16 --max_length 2048
+RANK=0 WORLD_SIZE=1 LOCAL_RANK=0 python ./cogagent_model_worker.py --host 0.0.0.0  --port 40000 --from_pretrained "./saved_models/ScreenAgent-2312" --bf16 --max_length 2048
 ```
 
 # Run

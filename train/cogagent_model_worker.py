@@ -15,7 +15,7 @@ from io import BytesIO
 import base64
 
 from sat.model.mixins import CachedAutoregressiveMixin
-from sat.model import AutoModel
+from models.cogagent_model import FineTuneTrainCogAgentModel
 
 from utils import chat, llama2_tokenizer, llama2_text_processor_inference, get_image_processor
 
@@ -38,7 +38,7 @@ class ModelWorker:
         self.args = args
     
         # load model
-        model, model_args = AutoModel.from_pretrained(
+        model, model_args = FineTuneTrainCogAgentModel.from_pretrained(
             args.from_pretrained,
             args=argparse.Namespace(
                 deepspeed=None,
