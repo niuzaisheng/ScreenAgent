@@ -169,7 +169,7 @@ RANK=0 WORLD_SIZE=1 LOCAL_RANK=0 python ./cogagent_model_worker.py --host 0.0.0.
 
 ### If using ScreenAgent as the Agent
 
-ScreenAgent is trained based on CogAgent. Download the sat format weight file `ScreenAgent-2312.zip` from [here](https://huggingface.co/niurl/ScreenAgent), unzip it and place it in `train/checkpoints/ScreenAgent-2312`. You can start it with the following command:
+ScreenAgent is trained based on CogAgent. Download the sat format weight file `ScreenAgent-2312.zip` from [here](https://huggingface.co/niurl/ScreenAgent), unzip it and place it in `train/saved_models/ScreenAgent-2312`. You can start it with the following command:
 
 ```bash
 cd train

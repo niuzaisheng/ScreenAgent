@@ -169,7 +169,7 @@ RANK=0 WORLD_SIZE=1 LOCAL_RANK=0 python ./cogagent_model_worker.py --host 0.0.0.
 
 ### 如果使用ScreenAgent作为Agent
 
-ScreenAgent是在CogAgent的基础上训练的，请到[这里](https://huggingface.co/niurl/ScreenAgent)下载sat格式的权重文件`ScreenAgent-2312.zip`，解压后放在`train/checkpoints/ScreenAgent-2312`，并使用以下命令来启动：
+ScreenAgent是在CogAgent的基础上训练的，请到[这里](https://huggingface.co/niurl/ScreenAgent)下载sat格式的权重文件`ScreenAgent-2312.zip`，解压后放在`train/saved_models/ScreenAgent-2312`，并使用以下命令来启动：
 
 ```bash
 cd train
