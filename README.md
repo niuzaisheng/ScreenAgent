@@ -338,6 +338,8 @@ Finally, if you want to merge the weights of sat distributed training into a sin
 - OmniACT: A Dataset and Benchmark for Enabling Multimodal Generalist Autonomous Agents for Desktop and Web http://arxiv.org/abs/2402.17553
 - Comprehensive Cognitive LLM Agent for Smartphone GUI Automation http://arxiv.org/abs/2402.11941
 - Improving Language Understanding from Screenshots http://arxiv.org/abs/2402.14073
+- AndroidEnv: A Reinforcement Learning Platform for Android http://arxiv.org/abs/2105.13231
+- SeeClick: Harnessing GUI Grounding for Advanced Visual GUI Agents https://arxiv.org/abs/2401.10935
 
 # Citation
 
