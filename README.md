@@ -340,6 +340,8 @@ Finally, if you want to merge the weights of sat distributed training into a sin
 - Improving Language Understanding from Screenshots http://arxiv.org/abs/2402.14073
 - AndroidEnv: A Reinforcement Learning Platform for Android http://arxiv.org/abs/2105.13231
 - SeeClick: Harnessing GUI Grounding for Advanced Visual GUI Agents https://arxiv.org/abs/2401.10935
+- AgentStudio: A Toolkit for Building General Virtual Agents https://arxiv.org/abs/2403.17918
+- ReALM: Reference Resolution As Language Modeling https://arxiv.org/abs/2403.20329
 
 # Citation
 
