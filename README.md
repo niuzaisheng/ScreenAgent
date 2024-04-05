@@ -342,6 +342,8 @@ Finally, if you want to merge the weights of sat distributed training into a sin
 - SeeClick: Harnessing GUI Grounding for Advanced Visual GUI Agents https://arxiv.org/abs/2401.10935
 - AgentStudio: A Toolkit for Building General Virtual Agents https://arxiv.org/abs/2403.17918
 - ReALM: Reference Resolution As Language Modeling https://arxiv.org/abs/2403.20329
+- AutoWebGLM: Bootstrap And Reinforce A Large Language Model-based Web Navigating Agent https://arxiv.org/abs/2404.03648
+- Octopus v2: On-device language model for super agent https://arxiv.org/pdf/2404.01744.pdf
 
 # Citation
 
