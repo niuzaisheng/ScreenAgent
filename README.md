@@ -344,7 +344,9 @@ Finally, if you want to merge the weights of sat distributed training into a sin
 - ReALM: Reference Resolution As Language Modeling https://arxiv.org/abs/2403.20329
 - AutoWebGLM: Bootstrap And Reinforce A Large Language Model-based Web Navigating Agent https://arxiv.org/abs/2404.03648
 - Octopus v2: On-device language model for super agent https://arxiv.org/pdf/2404.01744.pdf
-- Mobile-Env: An Evaluation Platform and Benchmark for LLM-GUI Interaction https://arxiv.org/pdf/2305.08144.pdf
+- Mobile-Env: An Evaluation Platform and Benchmark for LLM-GUI Interaction https://arxiv.org/abs/2305.08144
+- OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments https://arxiv.org/abs/2404.07972
+- Ferret-UI: Grounded Mobile UI Understanding with Multimodal LLMs https://arxiv.org/abs/2404.05719
 
 # Citation
 
