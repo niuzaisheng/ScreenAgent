@@ -357,6 +357,7 @@ Finally, if you want to merge the weights of sat distributed training into a sin
 - VisualWebBench: How Far Have Multimodal LLMs Evolved in Web Page Understanding and Grounding? https://arxiv.org/abs/2404.05955
 - OS-Copilot: Towards Generalist Computer Agents with Self-Improvement https://arxiv.org/abs/2402.07456
 - AutoDroid: LLM-powered Task Automation in Android https://arxiv.org/abs/2308.15272
+- Fine-Tuning Large Vision-Language Models as Decision-Making Agents via Reinforcement Learning https://rl4vlm.github.io
 
 # Citation
 
