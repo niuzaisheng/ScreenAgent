@@ -359,6 +359,7 @@ Finally, if you want to merge the weights of sat distributed training into a sin
 - AutoDroid: LLM-powered Task Automation in Android https://arxiv.org/abs/2308.15272
 - Fine-Tuning Large Vision-Language Models as Decision-Making Agents via Reinforcement Learning https://rl4vlm.github.io
 - WebArena: A Realistic Web Environment for Building Autonomous Agents https://arxiv.org/abs/2307.13854
+- Synapse: Trajectory-as-Exemplar Prompting with Memory for Computer Control https://openreview.net/pdf?id=Pc8AU1aF5e
 
 # Citation
 
