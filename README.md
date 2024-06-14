@@ -361,6 +361,7 @@ Finally, if you want to merge the weights of sat distributed training into a sin
 - WebArena: A Realistic Web Environment for Building Autonomous Agents https://arxiv.org/abs/2307.13854
 - Synapse: Trajectory-as-Exemplar Prompting with Memory for Computer Control https://openreview.net/pdf?id=Pc8AU1aF5e
 - gpt-computer-assistant https://github.com/onuratakan/gpt-computer-assistant
+- Mobile-Agent: The Powerful Mobile Device Operation Assistant Family https://github.com/X-PLUG/MobileAgent
 
 # Citation
 
