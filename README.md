@@ -362,6 +362,7 @@ Finally, if you want to merge the weights of sat distributed training into a sin
 - Synapse: Trajectory-as-Exemplar Prompting with Memory for Computer Control https://openreview.net/pdf?id=Pc8AU1aF5e
 - gpt-computer-assistant https://github.com/onuratakan/gpt-computer-assistant
 - Mobile-Agent: The Powerful Mobile Device Operation Assistant Family https://github.com/X-PLUG/MobileAgent
+- GUI Odyssey: A Comprehensive Dataset for Cross-App GUI Navigation on Mobile Devices https://github.com/OpenGVLab/GUI-Odyssey
 
 # Citation
 
