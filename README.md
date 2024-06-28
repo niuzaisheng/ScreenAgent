@@ -355,7 +355,6 @@ Finally, if you want to merge the weights of sat distributed training into a sin
 - VisualWebBench: How Far Have Multimodal LLMs Evolved in Web Page Understanding and Grounding? https://arxiv.org/abs/2404.05955
 - OS-Copilot: Towards Generalist Computer Agents with Self-Improvement https://arxiv.org/abs/2402.07456
 - VisualWebBench: How Far Have Multimodal LLMs Evolved in Web Page Understanding and Grounding? https://arxiv.org/abs/2404.05955
-- OS-Copilot: Towards Generalist Computer Agents with Self-Improvement https://arxiv.org/abs/2402.07456
 - AutoDroid: LLM-powered Task Automation in Android https://arxiv.org/abs/2308.15272
 - Fine-Tuning Large Vision-Language Models as Decision-Making Agents via Reinforcement Learning https://rl4vlm.github.io
 - WebArena: A Realistic Web Environment for Building Autonomous Agents https://arxiv.org/abs/2307.13854
@@ -363,6 +362,7 @@ Finally, if you want to merge the weights of sat distributed training into a sin
 - gpt-computer-assistant https://github.com/onuratakan/gpt-computer-assistant
 - Mobile-Agent: The Powerful Mobile Device Operation Assistant Family https://github.com/X-PLUG/MobileAgent
 - GUI Odyssey: A Comprehensive Dataset for Cross-App GUI Navigation on Mobile Devices https://github.com/OpenGVLab/GUI-Odyssey
+- ASSISTGUI: Task-Oriented PC Graphical User Interface Automation https://showlab.github.io/assistgui/
 
 # Citation
 
