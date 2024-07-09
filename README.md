@@ -363,6 +363,7 @@ Finally, if you want to merge the weights of sat distributed training into a sin
 - Mobile-Agent: The Powerful Mobile Device Operation Assistant Family https://github.com/X-PLUG/MobileAgent
 - GUI Odyssey: A Comprehensive Dataset for Cross-App GUI Navigation on Mobile Devices https://github.com/OpenGVLab/GUI-Odyssey
 - ASSISTGUI: Task-Oriented PC Graphical User Interface Automation https://showlab.github.io/assistgui/
+- You Only Look at Screens: Multimodal Chain-of-Action Agents https://arxiv.org/abs/2309.11436 https://github.com/cooelf/Auto-GUI
 
 # Citation
 
