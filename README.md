@@ -365,6 +365,7 @@ Finally, if you want to merge the weights of sat distributed training into a sin
 - ASSISTGUI: Task-Oriented PC Graphical User Interface Automation https://showlab.github.io/assistgui/
 - You Only Look at Screens: Multimodal Chain-of-Action Agents https://arxiv.org/abs/2309.11436 https://github.com/cooelf/Auto-GUI
 - E-ANT: A Large-Scale Dataset for Efficient Automatic GUI NavigaTion https://arxiv.org/pdf/2406.14250
+- AndroidWorld https://github.com/google-research/android_world
 
 # Citation
 
