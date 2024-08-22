@@ -366,6 +366,13 @@ Finally, if you want to merge the weights of sat distributed training into a sin
 - You Only Look at Screens: Multimodal Chain-of-Action Agents https://arxiv.org/abs/2309.11436 https://github.com/cooelf/Auto-GUI
 - E-ANT: A Large-Scale Dataset for Efficient Automatic GUI NavigaTion https://arxiv.org/pdf/2406.14250
 - AndroidWorld https://github.com/google-research/android_world
+- AppWorld: A Controllable World of Apps and People for Benchmarking Interactive Coding Agents https://arxiv.org/abs/2407.18901 https://appworld.dev/
+- Read Anywhere Pointed: Layout-aware GUI Screen Reading with Tree-of-Lens Grounding https://arxiv.org/abs/2406.19263
+- Cradle: Empowering Foundation Agents Towards General Computer Control https://arxiv.org/abs/2403.03186
+- Tree Search for Language Model Agents https://arxiv.org/abs/2407.01476
+- LaVague: Web Agent framework for builders https://github.com/lavague-ai/LaVague
+- WebLlama: https://github.com/McGill-NLP/webllama
+- AutoCrawler: A Progressive Understanding Web Agent for Web Crawler Generation https://arxiv.org/abs/2404.12753
 
 # Citation
 
