@@ -1,6 +1,7 @@
 client/config-test.yml
 train/saved_models/ScreenAgent-2312
 *.lock
+data/ScreenAgent/test/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
